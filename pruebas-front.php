@@ -7,7 +7,7 @@
 </head>
 <body>
     <form action="./backend/controlers/authentications/login-clientes-back.php" method="post">
-        <label for="email">Email</label>
+        <label for="usuario">Usuario</label>
         <input type="text" name="email" id="">
         <label for="password">Password</label>
         <input type="password" name="password" id="">

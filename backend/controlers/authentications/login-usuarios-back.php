@@ -1,20 +1,24 @@
 <?php
 session_start();
-require_once '../../models/clientes-modelo.php';
+require_once '../../models/usuarios-modelo.php';
 header("Content-Type: application/json");
+
+// DATOS SIMULADOS PARA PRUEBAS *****************************************************
+$_SESSION['rol_usuario'] = "superadmin";
+//***********************************************************************************
 
 $respuesta = "";
 
 // Recibir datos del formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = trim($_POST["email"]);
+    $usuario = trim($_POST["usuario"]);
     $password = trim($_POST["password"]);
 
 
     // ******************** Validaciones previas ********************
     
     // Validar que no estén vacíos
-    if (empty($email) || empty($password)) {
+    if (empty($usuario) || empty($password)) {
         $respuesta = [
             "mensaje" => "Hay campo(s) vacío(s) en el formulario.",
             "status" => "error"
@@ -24,28 +28,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-    // Validar el formato del correo electrónico
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $respuesta = [
-            "mensaje" => "El correo electrónico no es válido.",
-            "status" => "error"
-        ];
-        echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);
-        exit();
-    }
-    
-    
+       
     // ******************** Ejecusión de código si se cumple con todas las validaciones ********************  
 
-    $objetoClientes = new Clientes();
-    $consulta = $objetoClientes->loginCliente($email);
+    $objetoUsuarios = new Usuarios();
+    $consulta = $objetoUsuarios->loginUsuario($usuario);
 
     if ($resultado = $consulta->fetch_assoc()) {
         
-        if (password_verify($password, $resultado["password_cliente"])) {
-            // Iniciar sesión con los datos del cliente
-            $_SESSION["cliente"] = $resultado["nombre_cliente"];
-            $_SESSION['id_cliente'] = $resultado['id_cliente'];
+        if (password_verify($password, $resultado["password_usuario"])) {
+            // Iniciar sesión con los datos del usuario
+            $_SESSION["usuario"] = $resultado["nombre_usuario"];
+            $_SESSION['rol_usuario'] = $resultado['rol_usuario'];
     
             $respuesta = [
                 "mensaje" => "Inicio de sesión exitoso.",
@@ -53,7 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ];
         
             echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);  
-            $objetoClientes = null;
+            $objetoUsuarios = null;
+            echo "usuario: " . $_SESSION['usuario'] . ", rol: " . $_SESSION['rol_usuario'];
             exit();
             
         } else {
