@@ -7,15 +7,24 @@ class Clientes {
     private $telefono;
     private $email;
     private $password;
+    private $departamento;
+    private $ciudad;
+    private $barrio;
+    private $direccion_envio;
 
     // Constructor con valores predeterminados
-    public function __construct($id = null, $nombre = null, $telefono = null, $email = null, $password = null) {
-        $this->id = $id;
-        $this->nombre = $nombre;
-        $this->telefono = $telefono;
-        $this->email = $email;
-        $this->password = $password;
-    }
+    // public function __construct($id = null, $nombre = null, $telefono = null, $email = null, $password = null, $departamento = null, 
+    // $ciudad = null, $barrio = null, $direccion_envio = null) {
+    //     $this->id = $id;
+    //     $this->nombre = $nombre;
+    //     $this->telefono = $telefono;
+    //     $this->email = $email;
+    //     $this->password = $password;
+    //     $this->departamento = $departamento;
+    //     $this->ciudad = $ciudad;
+    //     $this->barrio = $barrio;
+    //     $this->direccion_envio = $direccion_envio;
+    // }
     
 
     // Getters
@@ -149,7 +158,7 @@ class Clientes {
     
     
 
-    function actualizarCliente($id, $telefono, $email) {
+    public function actualizarCliente($id, $telefono, $email) {
         $this->id = $id;
         $this->telefono = $telefono;
         $this->email = $email;
@@ -172,7 +181,34 @@ class Clientes {
         $conexion->close();
     
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
+    }
 
+
+    public function agregarEditarDireccionCliente($id, $departamento, $ciudad, $barrio, $direccion_envio) {
+        $this->id = $id;
+        $this->departamento = $departamento; 
+        $this->ciudad = $ciudad;
+        $this->barrio = $barrio;
+        $this->direccion_envio = $direccion_envio;
+
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+        $sql = "CALL agregarDireccionCliente(?, ?, ?, ?, ?)";
+        $stmt = $conexion->prepare($sql);
+
+        if ($stmt === false) {
+            die("Error en la preparación de la consulta: " . $conexion->error);
+        }
+
+        $stmt->bind_param("issss", $this->id, $this->departamento, $this->ciudad, $this->barrio, $this->direccion_envio);
+
+        // Ejecutar y validar la consulta
+        $resultado = $stmt->execute();
+        
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
     
 }
