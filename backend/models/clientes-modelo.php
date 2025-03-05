@@ -98,9 +98,9 @@ class Clientes {
         $stmt->execute();
 
         // Obtener resultado
-        $resultado = $stmt->get_result();
+        $stmt->get_result();
 
-        if ($resultado->num_rows > 0) {
+        if ($stmt->num_rows > 0) {
             return true;  
         } else {
             return false; 
@@ -148,6 +148,32 @@ class Clientes {
     }
     
     
+
+    function actualizarCliente($id, $telefono, $email) {
+        $this->id = $id;
+        $this->telefono = $telefono;
+        $this->email = $email;
+
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+        $sql = "CALL actualizarCliente(?, ?, ?)";
+        $stmt = $conexion->prepare($sql);
+    
+        if ($stmt === false) {
+            die("Error en la preparación de la consulta: " . $conexion->error);
+        }
+    
+        $stmt->bind_param("iss", $this->id, $this->telefono, $this->email);
+    
+        // Ejecutar y validar la consulta
+        $resultado = $stmt->execute();
+        
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
+
+    }
     
 }
 
