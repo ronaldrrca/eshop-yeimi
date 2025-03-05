@@ -236,6 +236,30 @@ class Clientes {
     
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
+
+
+    public function eliminarDireccionCliente($id) {
+        $this->id = $id;
+
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+        $sql = "CALL eliminarDireccionCliente(?)";
+        $stmt = $conexion->prepare($sql);
+
+        if ($stmt === false) {
+            die("Error en la preparación de la consulta: " . $conexion->error);
+        }
+
+        $stmt->bind_param("i", $this->id);
+
+        // Ejecutar y validar la consulta
+        $resultado = $stmt->execute();
+
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
+    }
 }
 
 
