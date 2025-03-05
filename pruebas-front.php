@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['id_cliente'] = 6;
+$_SESSION['rol_usuario'] = "superadmin";
 
 
 ?>
@@ -14,13 +14,13 @@ $_SESSION['id_cliente'] = 6;
     <title>Document</title>
 </head>
 <body>
-    <form action="./backend/controlers/clients/ver-infoCliente-back.php" method="post">
+    <form action="./backend/controlers/products/crear-producto-back.php" method="post">
 
         <!-- <label for="id">ID</label> -->
-        <input type="number" name="id" id="" value="6" hidden>
+        <!-- <input type="number" name="id" id="" value="6" hidden> -->
         <!-- <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre">
-        <label for="usuario">Usuario</label>
+        <input type="text" name="nombre" id="nombre"> -->
+        <!-- <label for="usuario">Usuario</label>
         <input type="text" name="usuario" id="usuario"> -->
         <!-- <label for="telefono">Teléfono</label>
         <input type="tel" name="telefono" id="telefono"> -->
@@ -42,6 +42,20 @@ $_SESSION['id_cliente'] = 6;
         <input type="password" name="password_confirmacion" id="password_confirmacion"> -->
         <!-- <label for="rol">Rol</label>
         <input type="text" name="rol" id="rol"> -->
+        <label for="nombre">Nombre producto</label>
+        <input type="text" name="nombre_producto" id="nombre">
+        <label for="descripcion">descripcion</label>
+        <input type="text" name="descripcion_producto" id="descripcion">
+        <label for="categoria">categoria</label>
+        <input type="text" name="categoria_producto" id="categoria">
+        <label for="codigo_barras">codigo_barras</label>
+        <input type="text" name="codigo_barras_producto" id="codigo_barras">
+        <label for="marca">marca</label>
+        <input type="text" name="marca_producto" id="marca">
+        <label for="precio">precio</label>
+        <input type="number" name="precio_producto" id="precio">
+        <label for="stosk">stock</label>
+        <input type="number" name="stock_producto" id="stock">
         <!-- <label for="departamento">Departamento</label>
         <input type="text" name="departamento" id="departamento"> -->
         <!-- <label for="ciudad">Ciudad</label>
