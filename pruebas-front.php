@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['id_cliente'] = 3;
+$_SESSION['id_cliente'] = 6;
 
 
 ?>
@@ -14,10 +14,10 @@ $_SESSION['id_cliente'] = 3;
     <title>Document</title>
 </head>
 <body>
-    <form action="./backend/controlers/clients/eliminar-direccionCliente-back.php" method="post">
+    <form action="./backend/controlers/clients/ver-carrito-back.php" method="post">
 
         <!-- <label for="id">ID</label> -->
-        <input type="number" name="id" id="" value="3" hidden>
+        <input type="number" name="id" id="" value="6" hidden>
         <!-- <label for="nombre">Nombre</label>
         <input type="text" name="nombre" id="nombre">
         <label for="usuario">Usuario</label>
