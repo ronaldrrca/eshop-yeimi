@@ -14,7 +14,7 @@ $_SESSION['id_cliente'] = 6;
     <title>Document</title>
 </head>
 <body>
-    <form action="./backend/controlers/clients/ver-carrito-back.php" method="post">
+    <form action="./backend/controlers/clients/ver-infoCliente-back.php" method="post">
 
         <!-- <label for="id">ID</label> -->
         <input type="number" name="id" id="" value="6" hidden>
