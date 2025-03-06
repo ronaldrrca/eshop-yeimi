@@ -8,8 +8,7 @@ $respuesta = [];
 //Verificamos si se reciben los datos
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = trim($_POST["id"]);
-    $rol_actual = trim($_POST['rol_actual']);
-    $rol_nuevo = trim($_POST['rol_nuevo']);
+
 } else {
     echo 'No se recibieron datos';
     exit;
@@ -27,19 +26,12 @@ if (empty($id)) {
     exit;
 }  
 
-// Verificamos que no se pueda cambiar el rol del superadmin
-if ($rol_actual === "superadmin") {
-    echo "No se puede cambiar el rol del superadmin";
-    exit;
-}
-
-
 $objUsuarios = new Usuarios();
-$cambiar = $objUsuarios->cambiaRolUsuario($id, $rol_nuevo);
+$eliminar = $objUsuarios->eliminarUsuario($id);
 
-if ($cambiar) {
+if ($eliminar) {
     $respuesta = [
-        "mensaje" => "Rol de usuario cambiado con éxito.",
+        "mensaje" => "Usuario eliminado con éxito.",
         "status" => "success"
     ];
     
