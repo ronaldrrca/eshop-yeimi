@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['id_usuario'] = 1;
+$_SESSION['rol_usuario'] = "superadmin";
 
 
 ?>
@@ -14,7 +14,7 @@ $_SESSION['id_usuario'] = 1;
     <title>Document</title>
 </head>
 <body>
-    <form action="./backend/controlers/users/cambiar-passwordUsuario-back.php" method="post">
+    <form action="./backend/controlers/users/cambiar-rolUsuario-back.php" method="post">
         <label for="id">ID</label>
         <input type="number" name="id" id="">
         <!-- <label for="id">ID cliente</label>
@@ -31,8 +31,8 @@ $_SESSION['id_usuario'] = 1;
         <input type="number" name="precio[]" id="precio"> -->
         <!-- <label for="nombre">Nombre</label>
         <input type="text" name="nombre" id="nombre"> -->
-        <label for="usuario">Usuario</label>
-        <input type="text" name="usuario" id="usuario">
+        <!-- <label for="usuario">Usuario</label>
+        <input type="text" name="usuario" id="usuario"> -->
         <!-- <label for="telefono">Teléfono</label>
         <input type="tel" name="telefono" id="telefono"> -->
         <!-- <label for="email">Email</label>
@@ -45,14 +45,18 @@ $_SESSION['id_usuario'] = 1;
         <input type="email" name="email_confirmacion" id="email_confirmacion">  -->
         <!-- <label for="password">Password</label>
         <input type="password" name="password" id=""> -->
-        <label for="password_actual">Contraseña actual</label>
-        <input type="password" name="password_actual" id="password_actual">
-        <label for="password_nuevo">Contrasña nueva</label>
-        <input type="password" name="password_nuevo" id="password_nuevo">
-        <label for="password_confirmacion">Repetir password</label>
-        <input type="password" name="password_confirmacion" id="password_confirmacion">
+        <!-- <label for="password_actual">Contraseña actual</label>
+        <input type="password" name="password_actual" id="password_actual"> -->
+        <!-- <label for="password_nuevo">Contrasña nueva</label>
+        <input type="password" name="password_nuevo" id="password_nuevo"> -->
+        <!-- <label for="password_confirmacion">Repetir password</label>
+        <input type="password" name="password_confirmacion" id="password_confirmacion"> -->
         <!-- <label for="rol">Rol</label>
         <input type="text" name="rol" id="rol"> -->
+        <label for="rol_actual">Rol actual</label>
+        <input type="text" name="rol_actual" id="rol_actual">
+        <label for="rol_nuevo">Rol nuevo</label>
+        <input type="text" name="rol_nuevo" id="rol_nuevo">
         <!-- <label for="nombre">Nombre producto</label>
         <input type="text" name="nombre_producto" id="nombre"> -->
         <!-- <label for="descripcion">descripcion</label>

@@ -10,13 +10,13 @@ class Usuarios {
     private $rol;
 
     // Constructor con valores predeterminados
-    public function __construct($id = null, $nombre = null, $usuario = null, $password = null, $rol = null) {
-        $this->id = $id;
-        $this->nombre = $nombre;
-        $this->precio = $usuario;
-        $this->stock = $password;
-        $this->password = $rol;
-    }
+    // public function __construct($id = null, $nombre = null, $usuario = null, $password = null, $rol = null) {
+    //     $this->id = $id;
+    //     $this->nombre = $nombre;
+    //     $this->precio = $usuario;
+    //     $this->stock = $password;
+    //     $this->password = $rol;
+    // }
     
 
     // Getters
@@ -167,6 +167,29 @@ class Usuarios {
     }
 
 
+    public function cambiaRolUsuario($id, $rol) {
+        $this->id = $id;
+        $this->rol = $rol;
+
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+        $sql = "CALL cambiarRolUsuario(?, ?)";
+        $stmt = $conexion->prepare($sql);
+    
+        if ($stmt === false) {
+            die("Error en la preparación de la consulta: " . $conexion->error);
+        }
+    
+        $stmt->bind_param("is", $this->id, $this->rol);
+    
+        // Ejecutar y validar la consulta
+        $resultado = $stmt->execute();
+        
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
+    }
     
     
 }
