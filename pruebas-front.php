@@ -14,7 +14,7 @@ $_SESSION['rol_usuario'] = "superadmin";
     <title>Document</title>
 </head>
 <body>
-    <form action="./backend/controlers/products/editar-producto-back.php" method="post">
+    <form action="./backend/controlers/products/eliminar-producto-back.php" method="post">
 
         <!-- <label for="id">ID</label>
         <input type="number" name="id" id=""> -->
@@ -44,20 +44,20 @@ $_SESSION['rol_usuario'] = "superadmin";
         <input type="password" name="password_confirmacion" id="password_confirmacion"> -->
         <!-- <label for="rol">Rol</label>
         <input type="text" name="rol" id="rol"> -->
-        <label for="nombre">Nombre producto</label>
-        <input type="text" name="nombre_producto" id="nombre">
-        <label for="descripcion">descripcion</label>
-        <input type="text" name="descripcion_producto" id="descripcion">
-        <label for="categoria">categoria</label>
-        <input type="text" name="categoria_producto" id="categoria">
+        <!-- <label for="nombre">Nombre producto</label>
+        <input type="text" name="nombre_producto" id="nombre"> -->
+        <!-- <label for="descripcion">descripcion</label>
+        <input type="text" name="descripcion_producto" id="descripcion"> -->
+        <!-- <label for="categoria">categoria</label>
+        <input type="text" name="categoria_producto" id="categoria"> -->
         <!-- <label for="codigo_barras">codigo_barras</label>
         <input type="text" name="codigo_barras_producto" id="codigo_barras"> -->
-        <label for="marca">marca</label>
-        <input type="text" name="marca_producto" id="marca">
-        <label for="precio">precio</label>
-        <input type="number" name="precio_producto" id="precio">
-        <label for="stosk">stock</label>
-        <input type="number" name="stock_producto" id="stock">
+        <!-- <label for="marca">marca</label>
+        <input type="text" name="marca_producto" id="marca"> -->
+        <!-- <label for="precio">precio</label>
+        <input type="number" name="precio_producto" id="precio"> -->
+        <!-- <label for="stosk">stock</label>
+        <input type="number" name="stock_producto" id="stock"> -->
         <!-- <label for="departamento">Departamento</label>
         <input type="text" name="departamento" id="departamento"> -->
         <!-- <label for="ciudad">Ciudad</label>

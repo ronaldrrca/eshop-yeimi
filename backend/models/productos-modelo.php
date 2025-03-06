@@ -92,6 +92,47 @@ class Productos {
     
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
+
+
+    public function eliminarProducto($id) {
+        $this->id = $id;
+
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+
+        $sql = "CALL eliminarProducto(?)";
+        $stmt = $conexion->prepare($sql);
+        $stmt->bind_param("i", $this->id);
+
+        // Ejecutar y validar la consulta
+        $resultado = $stmt->execute();
+
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
+    }
+
+
+    public function revisarPosiblesVentas($id) {
+        $this->id = $id;
+
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+
+        $sql = "CALL revisarPosiblesVentas(?)";
+        $stmt = $conexion->prepare($sql);
+        $stmt->bind_param("i", $this->id);
+
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
+
+    }
 }
 
 
