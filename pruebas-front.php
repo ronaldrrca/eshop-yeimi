@@ -14,7 +14,7 @@ $_SESSION['rol_usuario'] = "superadmin";
     <title>Document</title>
 </head>
 <body>
-    <form action="./backend/controlers/products/eliminar-producto-back.php" method="post">
+    <form action="./backend/controlers/products/ver-producto-back.php" method="post">
 
         <!-- <label for="id">ID</label>
         <input type="number" name="id" id=""> -->

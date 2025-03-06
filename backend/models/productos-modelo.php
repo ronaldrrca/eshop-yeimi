@@ -131,7 +131,26 @@ class Productos {
         $conexion->close();
     
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
+    }
 
+
+    public function verProducto($id) {
+        $this->id = $id;
+
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+
+        $sql = "CALL verProductoPorId(?)";
+        $stmt = $conexion->prepare($sql);
+        $stmt->bind_param("i", $this->id);
+
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
 }
 
