@@ -14,20 +14,20 @@ $_SESSION['rol_usuario'] = "superadmin";
     <title>Document</title>
 </head>
 <body>
-    <form action="./backend/controlers/sales/registrar-venta-back.php" method="post">
+    <form action="./backend/controlers/sales/ver-venta-back.php" method="post">
 
-        <label for="id">ID cliente</label>
-        <input type="number" name="id_cliente" id="">
-        <label for="medio_pago">Medio de pago</label>
-        <input type="text" name="medio_pago" id="medio_pago">
-        <label for="numero_referencia_pago">Número de referencia del pago</label>
-        <input type="text" name="numero_referencia_pago" id="numero_referencia_pago">
-        <label for="id_producto">ID producto</label>
-        <input type="number" name="id_producto[]" id="id_producto">
-        <label for="cantidad">Cantidad</label>
-        <input type="number" name="cantidad[]" id="cantidad">
-        <label for="precio">Precio</label>
-        <input type="number" name="precio[]" id="precio">
+        <!-- <label for="id">ID cliente</label>
+        <input type="number" name="id_cliente" id=""> -->
+        <!-- <label for="medio_pago">Medio de pago</label>
+        <input type="text" name="medio_pago" id="medio_pago"> -->
+        <!-- <label for="numero_referencia_pago">Número de referencia del pago</label>
+        <input type="text" name="numero_referencia_pago" id="numero_referencia_pago"> -->
+        <!-- <label for="id_producto">ID producto</label>
+        <input type="number" name="id_producto[]" id="id_producto"> -->
+        <!-- <label for="cantidad">Cantidad</label>
+        <input type="number" name="cantidad[]" id="cantidad"> -->
+        <!-- <label for="precio">Precio</label>
+        <input type="number" name="precio[]" id="precio"> -->
         <!-- <label for="nombre">Nombre</label>
         <input type="text" name="nombre" id="nombre"> -->
         <!-- <label for="usuario">Usuario</label>
@@ -74,6 +74,8 @@ $_SESSION['rol_usuario'] = "superadmin";
         <input type="text" name="barrio" id="barrio"> -->
         <!-- <label for="direccion_envio">Direccion</label>
         <input type="text" name="direccion_envio" id="envio"> -->
+        <label for="id_venta">Id venta</label>
+        <input type="number" name="id_venta" id="">
         
         <input type="submit" value="Acción">
         

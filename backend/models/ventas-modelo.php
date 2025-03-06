@@ -86,6 +86,29 @@ class Ventas {
     
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
+
+
+    public function verVenta($idVenta) {
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+        $sql = "CALL verVenta(?)";
+        $stmt = $conexion->prepare($sql);
+            
+        if ($stmt === false) {
+            die("Error en la preparación de la consulta: " . $conexion->error);
+        }
+
+        $stmt->bind_param("i", $idVenta);
+    
+        // Ejecutar y validar la consulta
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+        
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
+    }
 }
 
 
