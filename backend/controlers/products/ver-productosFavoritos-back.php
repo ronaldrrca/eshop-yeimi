@@ -14,7 +14,7 @@ $id_producto = 0;
 if (isset($_SESSION['rol_usuario']) && $_SESSION['rol_usuario'] == 'superadmin' || $_SESSION['rol_usuario'] == ' admin') {
 
     $objProducto = new Productos();
-    $resultado = $objProducto->verProductos();
+    $resultado = $objProducto->verProductosFavoritos();
 
     // Inicializar array del data
     $data = [];
@@ -25,7 +25,7 @@ if (isset($_SESSION['rol_usuario']) && $_SESSION['rol_usuario'] == 'superadmin' 
     // Verificar si el data está vacío
     if (empty($data)) {
         $respuesta = [
-            "mensaje" => "No hay productos registrados en la base de datos.",
+            "mensaje" => "No hay productos favoritos registrados en la base de datos.",
             "status" => "error"
         ];
     } else {
