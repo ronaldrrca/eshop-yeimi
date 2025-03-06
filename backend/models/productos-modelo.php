@@ -65,10 +65,33 @@ class Productos {
         $conexion->close();
     
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
-
     }
 
 
+    public function editarProducto($id, $nombre, $descripcion, $categoria, $marca, $precio, $stock) {
+        $this->id = $id;
+        $this->nombre = $nombre;
+        $this->descripcion = $descripcion;
+        $this->categoria = $categoria;
+        $this->marca = $marca;
+        $this->precio = $precio;
+        $this->stock = $stock;
+
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+
+        $sql = "CALL editarProducto(?, ?, ?, ?, ?, ?, ?)";
+        $stmt = $conexion->prepare($sql);
+        $stmt->bind_param("issssii", $this->id, $this->nombre, $this->descripcion, $this->categoria, $this->marca, $this->precio, $this->stock);
+
+        // Ejecutar y validar la consulta
+        $resultado = $stmt->execute();
+
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
+    }
 }
 
 

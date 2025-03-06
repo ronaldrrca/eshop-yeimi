@@ -85,17 +85,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         "mensaje" => "Usuario actualizado con éxito.",
                         "status" => "success"
                     ];
-                        
-                    echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);  
-
+                       
                 } else {
                     $respuesta = [
                         "mensaje" => "Se produjo un error.",
                         "status" => "error"
                     ];
-                        
-                    echo json_encode($respuesta, JSON_UNESCAPED_UNICODE); 
                 }
+
+                echo json_encode($respuesta, JSON_UNESCAPED_UNICODE); 
                     
             } else {
                 $respuesta = [
@@ -104,7 +102,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ];
                     
                 echo json_encode($respuesta, JSON_UNESCAPED_UNICODE); 
-                exit();
             }
         
         } else {

@@ -14,10 +14,12 @@ $_SESSION['rol_usuario'] = "superadmin";
     <title>Document</title>
 </head>
 <body>
-    <form action="./backend/controlers/products/crear-producto-back.php" method="post">
+    <form action="./backend/controlers/products/editar-producto-back.php" method="post">
 
-        <!-- <label for="id">ID</label> -->
-        <!-- <input type="number" name="id" id="" value="6" hidden> -->
+        <!-- <label for="id">ID</label>
+        <input type="number" name="id" id=""> -->
+        <label for="id_producto">ID producto</label>
+        <input type="number" name="id_producto" id="id_producto">
         <!-- <label for="nombre">Nombre</label>
         <input type="text" name="nombre" id="nombre"> -->
         <!-- <label for="usuario">Usuario</label>
@@ -48,8 +50,8 @@ $_SESSION['rol_usuario'] = "superadmin";
         <input type="text" name="descripcion_producto" id="descripcion">
         <label for="categoria">categoria</label>
         <input type="text" name="categoria_producto" id="categoria">
-        <label for="codigo_barras">codigo_barras</label>
-        <input type="text" name="codigo_barras_producto" id="codigo_barras">
+        <!-- <label for="codigo_barras">codigo_barras</label>
+        <input type="text" name="codigo_barras_producto" id="codigo_barras"> -->
         <label for="marca">marca</label>
         <input type="text" name="marca_producto" id="marca">
         <label for="precio">precio</label>
