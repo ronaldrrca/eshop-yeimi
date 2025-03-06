@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['rol_usuario'] = "superadmin";
+$_SESSION['id_usuario'] = 1;
 
 
 ?>
@@ -14,8 +14,9 @@ $_SESSION['rol_usuario'] = "superadmin";
     <title>Document</title>
 </head>
 <body>
-    <form action="./backend/controlers/sales/ver-venta-back.php" method="post">
-
+    <form action="./backend/controlers/users/cambiar-passwordUsuario-back.php" method="post">
+        <label for="id">ID</label>
+        <input type="number" name="id" id="">
         <!-- <label for="id">ID cliente</label>
         <input type="number" name="id_cliente" id=""> -->
         <!-- <label for="medio_pago">Medio de pago</label>
@@ -30,11 +31,11 @@ $_SESSION['rol_usuario'] = "superadmin";
         <input type="number" name="precio[]" id="precio"> -->
         <!-- <label for="nombre">Nombre</label>
         <input type="text" name="nombre" id="nombre"> -->
-        <!-- <label for="usuario">Usuario</label>
-        <input type="text" name="usuario" id="usuario"> -->
+        <label for="usuario">Usuario</label>
+        <input type="text" name="usuario" id="usuario">
         <!-- <label for="telefono">Teléfono</label>
         <input type="tel" name="telefono" id="telefono"> -->
-        <!-- <label for="usuario">Email</label>
+        <!-- <label for="email">Email</label>
         <input type="text" name="email" id="email"> -->
         <!-- <label for="email_actual">Email actual</label>
         <input type="email" name="email_actual" id="email_actual"> -->
@@ -44,12 +45,12 @@ $_SESSION['rol_usuario'] = "superadmin";
         <input type="email" name="email_confirmacion" id="email_confirmacion">  -->
         <!-- <label for="password">Password</label>
         <input type="password" name="password" id=""> -->
-        <!-- <label for="password_actual">Contraseña actual</label>
-        <input type="password" name="password_actual" id="password_actual"> -->
-        <!-- <label for="password_nuevo">Contrasña nueva</label>
-        <input type="password" name="password_nuevo" id="password_nuevo"> -->
-        <!-- <label for="password_confirmacion">Repetir password</label>
-        <input type="password" name="password_confirmacion" id="password_confirmacion"> -->
+        <label for="password_actual">Contraseña actual</label>
+        <input type="password" name="password_actual" id="password_actual">
+        <label for="password_nuevo">Contrasña nueva</label>
+        <input type="password" name="password_nuevo" id="password_nuevo">
+        <label for="password_confirmacion">Repetir password</label>
+        <input type="password" name="password_confirmacion" id="password_confirmacion">
         <!-- <label for="rol">Rol</label>
         <input type="text" name="rol" id="rol"> -->
         <!-- <label for="nombre">Nombre producto</label>
@@ -74,8 +75,8 @@ $_SESSION['rol_usuario'] = "superadmin";
         <input type="text" name="barrio" id="barrio"> -->
         <!-- <label for="direccion_envio">Direccion</label>
         <input type="text" name="direccion_envio" id="envio"> -->
-        <label for="id_venta">Id venta</label>
-        <input type="number" name="id_venta" id="">
+        <!-- <label for="id_venta">Id venta</label>
+        <input type="number" name="id_venta" id=""> -->
         
         <input type="submit" value="Acción">
         

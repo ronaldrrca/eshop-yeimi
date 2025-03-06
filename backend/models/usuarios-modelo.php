@@ -142,6 +142,31 @@ class Usuarios {
     }
 
 
+    public function cambiarPasswordUsuario($id, $password) {
+        $this->id = $id;
+        $this->password = $password;
+
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+        $sql = "CALL 	cambiarPasswordUsuario(?, ?)";
+        $stmt = $conexion->prepare($sql);
+    
+        if ($stmt === false) {
+            die("Error en la preparación de la consulta: " . $conexion->error);
+        }
+    
+        $stmt->bind_param("is", $this->id, $this->password);
+    
+        // Ejecutar y validar la consulta
+        $resultado = $stmt->execute();
+        
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
+    }
+
+
     
     
 }

@@ -68,10 +68,10 @@ class Ventas {
 
 
     public function verVentas() {
-        $objConexion = new Conexion();
-        $conexion = $objConexion->conectarse();
+        // $objConexion = new Conexion();
+        // $conexion = $objConexion->conectarse();
         $sql = "CALL verVentas()";
-        $stmt = $conexion->prepare($sql);
+        $stmt = $this->conexion->prepare($sql);
     
         if ($stmt === false) {
             die("Error en la preparación de la consulta: " . $conexion->error);
@@ -82,7 +82,7 @@ class Ventas {
         $resultado = $stmt->get_result();
         
         $stmt->close();
-        $conexion->close();
+        $this->conexion->close();
     
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
@@ -105,7 +105,7 @@ class Ventas {
         $resultado = $stmt->get_result();
         
         $stmt->close();
-        $conexion->close();
+        $this->conexion->close();
     
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
