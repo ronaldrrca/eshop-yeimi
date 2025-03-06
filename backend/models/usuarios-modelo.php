@@ -140,6 +140,9 @@ class Usuarios {
     
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
+
+
+    
     
 }
 
