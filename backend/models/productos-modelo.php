@@ -175,10 +175,10 @@ class Productos {
     }
 
 
-    public function verProductosFavoritos() {
+    public function verProductosFavoritosDelAdmin() {
         $objConexion = new Conexion();
         $conexion = $objConexion->conectarse();
-        $sql = "CALL verProductosFavoritos()";
+        $sql = "CALL verProductosFavoritosDelAdmin()";
         $stmt = $conexion->prepare($sql);
     
         if ($stmt === false) {
