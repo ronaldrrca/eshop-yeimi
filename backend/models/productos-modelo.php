@@ -225,11 +225,14 @@ class Productos {
     }
 
 
-    public function verProductosPorCategoria() {
+    public function verProductosPorCategoria($categoria) {
+        $this->categoria = $categoria;
+
         $objConexion = new Conexion();
         $conexion = $objConexion->conectarse();
-        $sql = "CALL verProductosPorCategoria()";
+        $sql = "CALL verProductosPorCategoria(?)";
         $stmt = $conexion->prepare($sql);
+        $stmt->bind_param("s", $this->categoria);
     
         if ($stmt === false) {
             die("Error en la preparación de la consulta: " . $conexion->error);
