@@ -14,7 +14,7 @@ $_SESSION['id_cliente'] = 3;
     <title>Document</title>
 </head>
 <body>
-    <form action="./backend/controlers/cart/agregar-itemCarrito-back.php" method="post">
+    <form action="./backend/controlers/cart/editar-itemCarrito-back.php" method="post">
         <!-- <label for="id">ID</label>
         <input type="number" name="id" id=""> -->
         <label for="id">ID cliente</label>
