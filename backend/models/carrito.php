@@ -75,6 +75,30 @@ class Carritos {
         return $resultado;
     }
     
+
+    public function eliminarDelCarrito($id_cliente, $id_producto) {
+        $this->id_cliente = $id_cliente;
+        $this->id_producto = $id_producto;
+        
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+        
+        $sql = "CALL eliminarDelCarrito(?, ?)";
+        $stmt = $conexion->prepare($sql);
+        
+        if ($stmt === false) {
+            die("Error en la preparación de la consulta: " . $conexion->error);
+        }
+
+        // Enlazar los parámetros y ejecutar la consulta
+        $stmt->bind_param("ii", $this->id_cliente, $this->id_producto);
+        $resultado = $stmt->execute();
+
+        $stmt->close();
+        $conexion->close();
+        
+        return $resultado;
+    }
 }
 
 
