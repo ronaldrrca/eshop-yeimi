@@ -9,11 +9,12 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
 
-// Validar el nombre de la nueva categoría 
+// Validar datos 
+$id = filter_input(INPUT_POST, 'id_categoria', FILTER_VALIDATE_INT);
 $nombre = ucwords(trim(filter_input(INPUT_POST, 'nombre_categoria', FILTER_SANITIZE_STRING)));
 
 // Validar que no llegue campo vacío
-if (empty($nombre)) {
+if (empty($id) || empty($nombre)) {
     echo json_encode(["mensaje" => "Hay campo(s) vacío(s) en el formulario.", "status" => "error"], JSON_UNESCAPED_UNICODE);
     exit;
 }
@@ -25,10 +26,10 @@ if (!isset($_SESSION['rol_usuario'])) {
 }
 
 $objCategoria = new Categorias();
-$crear = $objCategoria->crearCategoria($nombre);
+$editar = $objCategoria->editarCategoria($id, $nombre);
 
-if ($crear) {
-    echo json_encode(["mensaje" => "Se creó una nueva categoría.", "status" => "success"], JSON_UNESCAPED_UNICODE);
+if ($editar) {
+    echo json_encode(["mensaje" => "Se editó correctamente la categoría.", "status" => "success"], JSON_UNESCAPED_UNICODE);
 } else {
     echo json_encode(["mensaje" => "Ocurrió un error, no se generó el registro en la base de datos.", "status" => "error"], JSON_UNESCAPED_UNICODE);
 }
