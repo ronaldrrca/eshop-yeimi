@@ -14,7 +14,7 @@ $_SESSION['rol_usuario'] = "superadmin";
     <title>Document</title>
 </head>
 <body>
-    <form action="./backend/controlers/categories/eliminar-categoria-back.php" method="post">
+    <form action="./backend/controlers/products/gestionar-favoritoDelAdmin-back.php" method="post">
         <!-- <label for="id">ID</label>
         <input type="number" name="id" id=""> -->
         <!-- <label for="id">ID cliente</label>
@@ -25,8 +25,8 @@ $_SESSION['rol_usuario'] = "superadmin";
         <input type="text" name="numero_referencia_pago" id="numero_referencia_pago"> -->
         <!-- <label for="id_producto">ID producto</label>
         <input type="number" name="id_producto[]" id=""> -->
-        <!-- <label for="id_producto">ID producto</label>
-        <input type="number" name="id_producto" id=""> -->
+        <label for="id_producto">ID producto</label>
+        <input type="number" name="id_producto" id="">
         <!-- <label for="cantidad">Cantidad</label>
         <input type="number" name="cantidad[]" id=""> -->
         <!-- <label for="id_producto">ID producto</label>
@@ -87,8 +87,8 @@ $_SESSION['rol_usuario'] = "superadmin";
         <input type="text" name="direccion_envio" id="envio"> -->
         <!-- <label for="id_venta">Id venta</label>
         <input type="number" name="id_venta" id=""> -->
-        <label for="id_categoria">id</label>
-        <input type="number" name="id_categoria" id="">
+        <!-- <label for="id_categoria">id</label>
+        <input type="number" name="id_categoria" id=""> -->
         <!-- <label for="nombre_categoria">Categoría</label>
         <input type="text" name="nombre_categoria" id=""> -->
         

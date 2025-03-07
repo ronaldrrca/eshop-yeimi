@@ -39,10 +39,7 @@ if ($resultado) {
     echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);  // Convertir array PHP a JSON
 
 } else {
-    $respuesta = [
-        "mensaje" => "Error en la ejecución: " . $stmt->error,
-        "status" => "error"
-    ];
+    echo "No se recibieron datos";
 }
 
 ?>
