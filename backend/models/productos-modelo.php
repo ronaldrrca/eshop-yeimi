@@ -196,35 +196,6 @@ class Productos {
     }
 
 
-    public function marcarFavoritoDelAdmin($id) {
-        $this->id = $id;
-
-        $objConexion = new Conexion();
-        $conexion = $objConexion->conectarse();
-        $sql = "CALL marcarFavoritoDelAdmin(?)";
-        $stmt = $conexion->prepare($sql);
-        $stmt->bind_param("i", $this->id);
-    
-        if ($stmt === false) {
-            die("Error en la preparación de la consulta: " . $conexion->error);
-        }
-    
-        // Ejecutar y validar la consulta
-        $stmt->execute();
-        
-        if ($stmt->affected_rows > 0) {
-            $stmt->close();
-            $conexion->close();
-            return true;
-        } else {
-            $stmt->close();
-            $conexion->close();
-            return false;
-        }
-
-    }
-
-
     public function gestionarFavoritoDelAdmin($id) {
         $this->id = $id;
 
@@ -251,6 +222,27 @@ class Productos {
             return false;
         }
 
+    }
+
+
+    public function verProductosPorCategoria() {
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+        $sql = "CALL verProductosPorCategoria()";
+        $stmt = $conexion->prepare($sql);
+    
+        if ($stmt === false) {
+            die("Error en la preparación de la consulta: " . $conexion->error);
+        }
+    
+        // Ejecutar y validar la consulta
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+        
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
 }
 

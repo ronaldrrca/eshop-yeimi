@@ -85,6 +85,29 @@ class Categorias {
             return false;
         }
     }
+
+
+    public function verCategorias() {
+        
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+
+        $sql = "CALL verCategorias()";
+        $stmt = $conexion->prepare($sql);
+
+        if ($stmt === false) {
+            die("Error en la preparación de la consulta: " . $conexion->error);
+        }
+
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+
+        $stmt->close();
+        $conexion->close();
+    
+
+        return $resultado;
+    }
 }
 
 
