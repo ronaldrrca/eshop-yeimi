@@ -1,7 +1,7 @@
 <?php
 session_start();
-// $_SESSION['rol_usuario'] = "superadmin";
-$_SESSION['id_cliente'] = 3;
+$_SESSION['rol_usuario'] = "superadmin";
+// $_SESSION['id_cliente'] = 3;
 
 ?>
 
@@ -14,19 +14,19 @@ $_SESSION['id_cliente'] = 3;
     <title>Document</title>
 </head>
 <body>
-    <form action="./backend/controlers/cart/eliminar-itemCarrito-back.php" method="post">
+    <form action="./backend/controlers/categories/crear-categoria-back.php" method="post">
         <!-- <label for="id">ID</label>
         <input type="number" name="id" id=""> -->
-        <label for="id">ID cliente</label>
-        <input type="number" name="id_cliente" id="">
+        <!-- <label for="id">ID cliente</label>
+        <input type="number" name="id_cliente" id=""> -->
         <!-- <label for="medio_pago">Medio de pago</label>
         <input type="text" name="medio_pago" id="medio_pago"> -->
         <!-- <label for="numero_referencia_pago">Número de referencia del pago</label>
         <input type="text" name="numero_referencia_pago" id="numero_referencia_pago"> -->
         <!-- <label for="id_producto">ID producto</label>
         <input type="number" name="id_producto[]" id=""> -->
-        <label for="id_producto">ID producto</label>
-        <input type="number" name="id_producto" id="">
+        <!-- <label for="id_producto">ID producto</label>
+        <input type="number" name="id_producto" id=""> -->
         <!-- <label for="cantidad">Cantidad</label>
         <input type="number" name="cantidad[]" id=""> -->
         <!-- <label for="id_producto">ID producto</label>
@@ -87,6 +87,8 @@ $_SESSION['id_cliente'] = 3;
         <input type="text" name="direccion_envio" id="envio"> -->
         <!-- <label for="id_venta">Id venta</label>
         <input type="number" name="id_venta" id=""> -->
+        <label for="categoria">Categoría</label>
+        <input type="text" name="nombre_categoria" id="">
         
         <input type="submit" value="Acción">
         
