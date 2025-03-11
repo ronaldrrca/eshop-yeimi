@@ -67,6 +67,22 @@ header {
     align-items: center;
     padding-left: 2rem;
     gap: 0.5rem;
+    
+}
+
+.header_identidad_marca h1 span {
+    font-size: clamp(1rem, 2.5vw, 1.5rem); 
+    letter-spacing: 1rem;
+    padding-left: 1rem;
+}
+
+.header_identidad_marca h1 {
+   line-height: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   
 }
 
 .header_iconos_varios {
@@ -83,6 +99,20 @@ header {
 
 .header_usuario {
     display: none;
+}
+
+.header_link_whatsapp {
+    display: flex;
+}
+
+.header_icono_whatsapp {
+    width: 3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.header_icono_whatsapp:hover {
+    transform: scale(1.1);
 }
 
 .icono_carrito {
@@ -209,6 +239,10 @@ nav a::after {
     .header_contenedor_varios {
         height: 6rem;
        justify-content: sp;
+    }
+
+    .header_identidad_marca h1 {
+        line-height: 2.5rem;
     }
 
     .nav {

@@ -21,13 +21,14 @@
             <path d="M12 0C5.373 0 0 5.373 0 12c0 5.188 3.303 9.605 7.912 11.239-.11-.955-.202-2.423.04-3.467.219-.939 1.414-5.974 1.414-5.974s-.361-.723-.361-1.793c0-1.678.974-2.931 2.187-2.931 1.032 0 1.532.775 1.532 1.705 0 1.038-.661 2.591-1.002 4.027-.284 1.199.6 2.177 1.782 2.177 2.138 0 3.784-2.255 3.784-5.506 0-2.88-2.069-4.892-5.029-4.892-3.43 0-5.447 2.57-5.447 5.229 0 1.038.4 2.152.9 2.756.099.118.113.221.084.34-.09.375-.296 1.199-.336 1.365-.053.22-.177.267-.41.161-1.535-.64-2.491-2.64-2.491-4.251 0-3.457 2.51-6.634 7.238-6.634 3.799 0 6.756 2.706 6.756 6.322 0 3.772-2.38 6.811-5.689 6.811-1.11 0-2.151-.575-2.506-1.251l-.681 2.598c-.246.952-.907 2.144-1.349 2.868.972.301 2.001.464 3.067.464 6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
 
         </a>
-</div>
+    </div>
 
-<div class="header_identidad_marca">
-        <img class="logo" src="assets/imgs-site/logo.svg" alt="logo">
-        <h1 class="texto-gris">Sharyam Makeup</h1>
+    <div class="header_identidad_marca">
+            <img class="logo" src="assets/imgs-site/logo.svg" alt="logo">
+            <h1 class="texto-gris">Sharyam<br><span>Makeup</span> </h1>
     </div>
     <div class="header_iconos_varios">
+        <a class="header_link_whatsapp" href="http://wa.me/573003581311?text=Hola,%20quiero%20información%20sobre%20sus%20producto" target="_blank" rel="noopener noreferrer"><img class="header_icono_whatsapp" src="assets/imgs-site/whatsapp-icono.svg" alt="icono de whatsapp"></a>
         <div id="header_usuario" class="header_usuario">
             <span><?php 
                 if (isset($_SESSION['nombre_cliente'])) { ?>
