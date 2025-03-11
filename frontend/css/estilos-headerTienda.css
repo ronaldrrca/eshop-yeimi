@@ -287,24 +287,24 @@ nav a::after {
 
 @media (min-width: 1200px) {
     header {
-        height: 14rem;
+        height: 16rem;
         padding: 2rem 0;
         padding-left: 5rem;
         padding-right: 5rem;
     }
 
     main {
-        margin-top: 14rem;
+        margin-top: 16rem;
         padding-left: 5rem;
         padding-right: 5rem;
     }
 
     .header_contenedor_varios {
-        height: 6rem;
+        height: 8rem;
     }
 
     nav {        
-        height: 6rem;
+        height: 4rem;
     }
 
     .nav ul {
