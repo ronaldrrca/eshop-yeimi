@@ -1,3 +1,10 @@
+<?php
+session_start();
+$_SESSION['id_cliente'] = 1;
+$_SESSION['nombre_cliente'] = "Ronald";
+// session_destroy();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,8 +27,11 @@
     <title>Tu Tienda Online | Productos de Calidad al Mejor Precio</title>
     <link rel="shortcut icon" href="./assets/imgs-site/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./frontend/css/estilos-generales.css">
+    <link rel="stylesheet" href="./frontend/css/estilos-headerTienda.css">
 </head>
 <body>
-    lifhaisdiuasiuf
+    <header><?php include_once './frontend/includes-front/header-tienda.php' ?></header>
+    <main>hñoaiosbñihaoñigbhoñai</main>
+    <script src="./frontend/js/header-tienda.js"></script>
 </body>
 </html>
