@@ -1,0 +1,55 @@
+.hero {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: purple;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.hero img {
+    width: 100%;
+    max-width: 150rem;
+    object-fit: cover; 
+    object-position: center; 
+    
+}
+
+.hero_frase {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.6);;
+    padding: 1rem 0;
+ 
+}
+
+.hero_frase span {
+    color: var(--color-primario);
+    z-index: 100;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+@media (min-width: 769px) {
+    .hero {
+      height: 40rem;
+    }
+  
+    .hero_frase span {
+      font-size: 1.6rem;
+      }
+  }
+
+  @media (min-width: 1200px) {
+    .hero_frase span {
+      font-size: 2.2rem;
+      }
+  }

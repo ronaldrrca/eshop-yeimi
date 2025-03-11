@@ -28,11 +28,20 @@ $_SESSION['nombre_cliente'] = "Ronald";
     <link rel="shortcut icon" href="./assets/imgs-site/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./frontend/css/estilos-generales.css">
     <link rel="stylesheet" href="./frontend/css/estilos-headerTienda.css">
+    <link rel="stylesheet" href="frontend/css/estilos-index.css">
     <link rel="stylesheet" href="frontend/css/estilos-footer.css">
 </head>
 <body>
     <header><?php include_once './frontend/includes-front/header-tienda.php' ?></header>
-    <main>hñoaiosbñihaoñigbhoñai</main>
+    <main>
+        <section class="hero">
+            <div class="hero_frase">
+                <span>Colores, texturas y magia para tu piel.</span>
+                <span>Transforma tu rutina, descubre tu mejor versión.</span>
+            </div>
+            <img src="./assets/imgs-site/hero.webp" alt="modelo maqillada rodeada de flores, con elementos y utencilios de maquillaje">
+        </section>
+    </main>
     <footer class="footer"><?php include './frontend/includes-front/footer.php' ?></footer>
     <script src="./frontend/js/header-tienda.js"></script>
 </body>

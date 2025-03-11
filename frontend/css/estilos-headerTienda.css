@@ -6,7 +6,7 @@ header {
     display: flex;
     padding: 1rem 0;
     background-color: var(--color-primario);
-    z-index: 100;
+    z-index: 200;
 }
 
 .header_contenedor_varios {
