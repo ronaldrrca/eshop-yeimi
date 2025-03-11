@@ -38,6 +38,31 @@
     font-size: 1.4rem;
 }
 
+.cta {
+    display: inline-block; /* Se adapta al contenido */
+    background-color: #E6A5B6; /* Color del botón */
+    color: white; /* Color del texto */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem 2rem; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.cta:hover {
+    background-color: #d18a9f; /* Un poco más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de crecimiento */
+}
+
+.cta-container {
+    text-align: center;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
 @media (min-width: 769px) {
     .hero {
       height: 40rem;

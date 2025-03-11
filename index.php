@@ -41,6 +41,52 @@ $_SESSION['nombre_cliente'] = "Ronald";
             </div>
             <img src="./assets/imgs-site/hero.webp" alt="modelo maqillada rodeada de flores, con elementos y utencilios de maquillaje">
         </section>
+
+        <div class="cta-container"><a href="#productos" class="cta">Explora nuestros productos</a></div>
+        
+        <section>
+            <h2>Productos destacados</h2>
+        </section>
+
+        <section>
+            <h2>Lo nuevo o lo más vendido</h2>
+        </section>
+
+        <section>
+            <h2>Beneficios o propuesta de valor</h2>
+                ¿Por qué comprar aquí? Ejemplo:
+                Envío gratis
+                Descuentos exclusivos
+                Pagos seguros
+                Garantía de satisfacción
+        </section>
+           
+        <section>
+            <h2>Novedades o promociones</h2>
+        </section>
+            
+        <section>   
+            <h2>Ofertas del mes</h2>
+        </section>
+            
+        <section>
+            <h2>Blog o contenido útil (opcional)</h2>
+        </section>
+
+        <section>
+            <h2>Consejos, tendencias o cómo usar los productos</h2>
+        </section>
+            
+        <section>
+            <h2>Suscripciones a Newsletter (formulario)</h2>
+        </section>
+
+        <section>
+            <h2>Tienda física y envíos nacinales</h2>
+        </section>
+            
+            
+        
     </main>
     <footer class="footer"><?php include './frontend/includes-front/footer.php' ?></footer>
     <script src="./frontend/js/header-tienda.js"></script>
