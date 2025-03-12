@@ -88,7 +88,8 @@ $_SESSION['nombre_cliente'] = "Ronald";
             
         
     </main>
-    <footer class="footer"><?php include './frontend/includes-front/footer.php' ?></footer>
+    <footer><?php include './frontend/includes-front/footer.php' ?></footer>
     <script src="./frontend/js/header-tienda.js"></script>
+    <script src="./frontend/js/footer.js"></script>
 </body>
 </html>
