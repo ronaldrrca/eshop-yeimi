@@ -107,7 +107,7 @@ main {
     min-height: 50rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     margin-top: 6rem;
     padding: 2rem 1rem;
@@ -293,7 +293,31 @@ button {
     color: red;
 }
 
-.input {
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.formulario-login {
+    width: 35rem;
+    margin: 2rem 0;
+    border: 1px solid var(--color-secundario);
+    border-radius: 5px;
+}
+
+.formulario-login-registrarse {
+    display: block;
+    padding: 0.3rem 0.5rem;
+    font-size: 1.4rem;
+    transition: all 0.3s;
+}
+
+.formulario-login-registrarse:hover {
+    text-decoration: underline;
+}
+
+input {
     width: 100%;
     padding: 1rem;
     border: 2px solid var(--color-secundario);
@@ -302,17 +326,64 @@ button {
     transition: 0.3s;
 }
 
-.input:focus {
+input:focus {
     border-color: var(--color-terciario);
     outline: none;
     box-shadow: 0 0 5px rgba(230, 165, 182, 0.5);
 }
 
-.label {
+label {
+    margin-top: 1.5rem;
+    padding-left: 1rem;
     font-weight: bold;
-    margin-bottom: 4rem;
+    margin-bottom: 0.3rem;
     display: block;
 }
+
+input[type="submit"] {
+    background-color: var(--color-terciario);
+    margin-top: 3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+}
+
+.password-container button {
+    width: 3rem;
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.password-container input[type="submit"]:hover,
+.password-container input[type="submit"]n:focus {
+    background: none;
+    outline: none;
+}
+
+#resultado-login {
+    width: 100%;
+    position: absolute;
+    top: 110%;
+    display: block;
+    text-align: center;
+    font-size: 1.4rem;
+    color: red;
+    background-color: transparent;
+}
+
 
 li {
     list-style: none;

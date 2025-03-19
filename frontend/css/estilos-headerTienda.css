@@ -38,8 +38,8 @@ header {
     fill: currentColor; /* Hace que el color del SVG dependa de la clase */
 }
 
-.social-icon.twitter:hover {
-    color: #1DA1F2;
+.social-icon.x:hover {
+    color: #000000;
 }
 
 .social-icon.facebook:hover {
@@ -87,6 +87,8 @@ header {
 
 .header_iconos_varios {
     display: flex;
+    justify-content: center;
+    align-items: center;
     min-width: 8rem;
     width: auto;
     gap: 1rem;
@@ -208,6 +210,7 @@ nav a::after {
     }
 
     .header_usuario {
+        height: 2rem;
         position: relative;
         display: flex;
         align-items: center;
@@ -289,7 +292,7 @@ nav a::after {
 
     .header_menu_datosUsuario {
         position: absolute;
-        top: 80%;
+        top: 125%;
         left: 50%;
         transform: translate(-50%);
         background-color: var(--color-primario);

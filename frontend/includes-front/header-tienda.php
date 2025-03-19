@@ -1,7 +1,8 @@
 <div class="header_contenedor_varios">
     <div class="social-icons">
-        <a href="#" class="social-icon twitter" target="_blank">
-            <svg viewBox="0 0 24 24"><path d="M22 5.8a8.3 8.3 0 0 1-2.3.6 4 4 0 0 0 1.8-2.2 8.1 8.1 0 0 1-2.6 1A4 4 0 0 0 11 9a11.3 11.3 0 0 1-8.2-4.2A4 4 0 0 0 5 10.5a4 4 0 0 1-1.8-.5v.1a4 4 0 0 0 3.2 4 4 4 0 0 1-1.8 0 4 4 0 0 0 3.7 2.8A8.2 8.2 0 0 1 2 18.2a11.4 11.4 0 0 0 6 1.8c7.2 0 11.2-6 11.2-11.2V8a8 8 0 0 0 2-2.2Z"/></svg>
+        <a href="#" class="social-icon x" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5 2H21L13.5 10.5L22 22H15.5L10.2 14.8L4.8 22H1.5L9.5 12L1 2H7.7L12.6 8.5L17.5 2ZM16.3 20H18.2L6.2 4H4.2L16.3 20Z"/></svg>
         </a>
 
         <a href="#" class="social-icon facebook" target="_blank">
@@ -31,8 +32,8 @@
         <a class="header_link_whatsapp" href="http://wa.me/573003581311?text=Hola,%20quiero%20información%20sobre%20sus%20producto" target="_blank" rel="noopener noreferrer"><img class="header_icono_whatsapp" src="assets/imgs-site/whatsapp-icono.svg" alt="icono de whatsapp"></a>
         <div id="header_usuario" class="header_usuario">
             <span><?php 
-                if (isset($_SESSION['nombre_cliente'])) { ?>
-                    <span class="header_usuario_nombreCliente"><?php echo $_SESSION['nombre_cliente']; ?></span>
+                if (isset($_SESSION['cliente'])) { ?>
+                    <span class="header_usuario_nombreCliente"><?php echo $_SESSION['cliente']; ?></span>
                     <ul id="header_menu_datosUsuario" class="header_menu_datosUsuario">
                         <li><a href="#">Mis datos</a></li>
                         <li><a href="#">Mis compras</a></li>
@@ -60,9 +61,9 @@
                 <li class="header_menu_ocultables"><a href="#">Mis datos</a></li>
                 <li class="header_menu_ocultables"><a href="#">Mis compras</a></li>
                 <li class="header_menu_ocultables"><a href="#">Cambiar contraseña</a></li>
-                <li><a href="#">Cerrar sesión</a></li>
+                <li><a href="backend/controlers/authentications/logout.php">Cerrar sesión</a></li>
            <?php } else { ?>
-            <li><a href="#">Login</a></li>
+            <li><a href="login-cliente.php">Login</a></li>
             <?php } ?>
     </ul>
 </nav>

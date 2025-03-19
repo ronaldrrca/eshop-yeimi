@@ -1,5 +1,3 @@
-<?php session_start(); ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,68 +21,28 @@
     <link rel="shortcut icon" href="./assets/imgs-site/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./frontend/css/estilos-generales.css">
     <link rel="stylesheet" href="./frontend/css/estilos-headerTienda.css">
-    <link rel="stylesheet" href="frontend/css/estilos-index.css">
     <link rel="stylesheet" href="frontend/css/estilos-footer.css">
 </head>
 <body>
     <header><?php include_once './frontend/includes-front/header-tienda.php' ?></header>
     <main>
-        <section class="hero">
-            <div class="hero_frase">
-                <span>Colores, texturas y magia para tu piel.</span>
-                <span>Transforma tu rutina, descubre tu mejor versión.</span>
+        <h2>Inicio de sesión</h2>
+        <form id="formulario-login-cliente" class="formulario-login">
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" id="email" required autocomplete="email">
+            <label for="password">Contraseña</label>
+            <div class="password-container">
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+                <button type="button" id="togglePassword">👁️</button>
+                <div id="resultado-login"></div>
             </div>
-            <img src="./assets/imgs-site/hero.webp" alt="modelo maqillada rodeada de flores, con elementos y utencilios de maquillaje">
-        </section>
-
-        <section class="index-section">
-            <h2>Productos destacados</h2>
-            <div id="productos_destacados_contenido"></div>
-        </section>
-
-        <section>
-            <h2>Lo nuevo o lo más vendido</h2>
-        </section>
-
-        <section>
-            <h2>Beneficios o propuesta de valor</h2>
-                ¿Por qué comprar aquí? Ejemplo:
-                Envío gratis
-                Descuentos exclusivos
-                Pagos seguros
-                Garantía de satisfacción
-        </section>
-           
-        <section>
-            <h2>Novedades o promociones</h2>
-        </section>
-            
-        <section>   
-            <h2>Ofertas del mes</h2>
-        </section>
-            
-        <section>
-            <h2>Blog o contenido útil (opcional)</h2>
-        </section>
-
-        <section>
-            <h2>Consejos, tendencias o cómo usar los productos</h2>
-        </section>
-            
-        <section>
-            <h2>Suscripciones a Newsletter (formulario)</h2>
-        </section>
-
-        <section>
-            <h2>Tienda física y envíos nacinales</h2>
-        </section>
-            
-            
-        <div class="cta-container"><a href="#productos" class="cta">Explora nuestros productos</a></div>
+            <input type="submit" value="Iniciar sesión">
+        </form>
+        <a class="formulario-login-registrarse" href="#">Registrarse</a>
     </main>
     <footer><?php include './frontend/includes-front/footer.php' ?></footer>
     <script src="./frontend/js/header-tienda.js"></script>
-    <script src="./frontend/js/index.js"></script>
+    <script src="./frontend/js/login-cliente.js"></script>
     <script src="./frontend/js/footer.js"></script>
 </body>
 </html>

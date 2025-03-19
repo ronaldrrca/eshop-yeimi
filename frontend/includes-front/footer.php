@@ -13,7 +13,7 @@
     <h3>Síguenos en redes sociales</h3>
     <div id="footer-links-redes" class="footer-section">
         <p class="footer-redes">
-            <a href="https://twitter.com/tu_cuenta" target="_blank">Twitter</a> | 
+            <a href="https://x.com/tu_cuenta" target="_blank">X</a> | 
             <a href="https://facebook.com/tu_pagina" target="_blank">Facebook</a> | 
             <a href="https://instagram.com/tu_cuenta" target="_blank">Instagram</a> |
             <a href="https://youtube.com/tu_cuenta" target="_blank">Youtube</a> |
@@ -21,8 +21,9 @@
         </p>
     </div>
     <div id="footer-iconos-redes" class="footer-section">
-        <a href="#" class="social-icon twitter" target="_blank">
-            <svg viewBox="0 0 24 24"><path d="M22 5.8a8.3 8.3 0 0 1-2.3.6 4 4 0 0 0 1.8-2.2 8.1 8.1 0 0 1-2.6 1A4 4 0 0 0 11 9a11.3 11.3 0 0 1-8.2-4.2A4 4 0 0 0 5 10.5a4 4 0 0 1-1.8-.5v.1a4 4 0 0 0 3.2 4 4 4 0 0 1-1.8 0 4 4 0 0 0 3.7 2.8A8.2 8.2 0 0 1 2 18.2a11.4 11.4 0 0 0 6 1.8c7.2 0 11.2-6 11.2-11.2V8a8 8 0 0 0 2-2.2Z"/></svg>
+        <a href="#" class="social-icon x" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5 2H21L13.5 10.5L22 22H15.5L10.2 14.8L4.8 22H1.5L9.5 12L1 2H7.7L12.6 8.5L17.5 2ZM16.3 20H18.2L6.2 4H4.2L16.3 20Z"/></svg>
         </a>
 
         <a href="#" class="social-icon facebook" target="_blank">
