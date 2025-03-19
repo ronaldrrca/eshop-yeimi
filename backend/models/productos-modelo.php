@@ -225,6 +225,75 @@ class Productos {
     }
 
 
+    public function consultarDisponibilidad($id_cliente, $id_producto) { 
+        $this->id = $id_producto;
+
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+        $sql = "CALL consultarDisponibilidad(?, ?)";
+        $stmt = $conexion->prepare($sql);
+    
+        if (!$stmt) {
+            die(json_encode(["error" => "Error en la preparación de la consulta: " . $conexion->error]));
+        }
+    
+        $stmt->bind_param("ii", $id_cliente, $this->id);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+        
+        $stmt->close();
+        $conexion->close();
+    
+        return ($resultado->num_rows > 0) ? $resultado : null;
+    }
+
+
+
+    public function verStock($id) {
+        $this->id = $id;
+    
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+        $sql = "CALL verStock(?)";
+        $stmt = $conexion->prepare($sql);
+    
+        if (!$stmt) {
+            die(json_encode(["error" => "Error en la preparación de la consulta: " . $conexion->error]));
+        }
+    
+        $stmt->bind_param("i", $this->id);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+        
+        $stmt->close();
+        $conexion->close();
+    
+        return ($resultado->num_rows > 0) ? $resultado : null;
+    }
+
+
+    public function actualizarStock($id, $stock) {
+        $this->id = $id;
+        $this->stock = $stock;
+
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+
+        $sql = "CALL actualizarStock(?, ?)";
+        $stmt = $conexion->prepare($sql);
+        $stmt->bind_param("ii", $this->id, $this->stock);
+
+        // Ejecutar y validar la consulta
+        $resultado = $stmt->execute();
+
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
+    }
+    
+
+
     public function verProductosPorCategoria($categoria) {
         $this->categoria = $categoria;
 

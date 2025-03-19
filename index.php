@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['id_cliente'] = 1;
+$_SESSION['id_cliente'] = 3;
 $_SESSION['nombre_cliente'] = "Ronald";
 // session_destroy();
 ?>
@@ -42,10 +42,9 @@ $_SESSION['nombre_cliente'] = "Ronald";
             <img src="./assets/imgs-site/hero.webp" alt="modelo maqillada rodeada de flores, con elementos y utencilios de maquillaje">
         </section>
 
-        <div class="cta-container"><a href="#productos" class="cta">Explora nuestros productos</a></div>
-        
-        <section>
+        <section class="index-section">
             <h2>Productos destacados</h2>
+            <div id="productos_destacados_contenido"></div>
         </section>
 
         <section>
@@ -86,10 +85,11 @@ $_SESSION['nombre_cliente'] = "Ronald";
         </section>
             
             
-        
+        <div class="cta-container"><a href="#productos" class="cta">Explora nuestros productos</a></div>
     </main>
     <footer><?php include './frontend/includes-front/footer.php' ?></footer>
     <script src="./frontend/js/header-tienda.js"></script>
+    <script src="./frontend/js/index.js"></script>
     <script src="./frontend/js/footer.js"></script>
 </body>
 </html>

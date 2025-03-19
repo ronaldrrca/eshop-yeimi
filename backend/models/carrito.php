@@ -29,15 +29,9 @@ class Carritos {
             die("Error en la preparación de la consulta: " . $conexion->error);
         }
     
-        // Recorrer los productos y agregarlos uno por uno
-        foreach ($this->id_producto as $key => $producto) {
-            $cantidad_producto = $this->cantidad[$key];
-    
-            // Enlazar los parámetros y ejecutar la consulta
-            $stmt->bind_param("iii", $this->id_cliente, $producto, $cantidad_producto);
-            $resultado = $stmt->execute();
-        }
-    
+        $stmt->bind_param("iii", $this->id_cliente, $this->id_producto, $this->cantidad);
+        $resultado = $stmt->execute();
+            
         $stmt->close();
         $conexion->close();
         

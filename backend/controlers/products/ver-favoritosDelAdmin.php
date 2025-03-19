@@ -6,10 +6,10 @@ header('Content-Type: application/json');
 $respuesta = [];
 
 // Verificar si hay una sesión iniciada
-if (!isset($_SESSION['rol_usuario'])) {
-    echo json_encode(["mensaje" => "Usuario no tiene permisos suficientes.", "status" => "error"], JSON_UNESCAPED_UNICODE);
-    exit;
-}
+// if (!isset($_SESSION['rol_usuario'])) {
+//     echo json_encode(["mensaje" => "Usuario no tiene permisos suficientes.", "status" => "error"], JSON_UNESCAPED_UNICODE);
+//     exit;
+// }
 
 $objProducto = new Productos();
 $resultado = $objProducto->verProductosFavoritosDelAdmin();
@@ -32,14 +32,14 @@ if ($resultado) {
         $respuesta = [
             "mensaje" => "Productos obtenidos correctamente.",
             "status" => "success",
-            "data" => $data
+            "productos" => $data
         ];
     }
 
     echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);  // Convertir array PHP a JSON
 
 } else {
-    echo "No se recibieron datos";
+    echo json_encode(["mensaje" => "No se recibieron datos.", "status" => "error"], JSON_UNESCAPED_UNICODE);
 }
 
 ?>

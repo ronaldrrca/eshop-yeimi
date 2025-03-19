@@ -63,6 +63,27 @@
     right: 1rem;
 }
 
+.index-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 10rem;
+}
+
+.index-section h2 {
+    margin-bottom: 2rem;
+}
+
+#productos_destacados_contenido {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
 @media (min-width: 769px) {
     .hero {
       height: 40rem;
@@ -70,11 +91,19 @@
   
     .hero_frase span {
       font-size: 1.6rem;
-      }
+    }
+
+    #productos_destacados_contenido {
+        gap: 3rem;
+    }
   }
 
   @media (min-width: 1200px) {
     .hero_frase span {
       font-size: 2.2rem;
-      }
+    }
+
+    #productos_destacados_contenido {
+        gap: 5rem;
+    }
   }
