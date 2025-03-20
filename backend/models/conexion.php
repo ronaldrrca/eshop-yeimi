@@ -3,7 +3,7 @@
 class Conexion{
   private $host="localhost";
   private $usuario="root";
-  private $contrasena="";//pass del usuario en la base de datos real = RHZ!PE*ca_ip
+  private $contrasena="";
   private $bd="eshop";
 
   public function conectarse(){ 

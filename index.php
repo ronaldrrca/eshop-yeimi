@@ -42,8 +42,9 @@
             <div id="productos_destacados_contenido"></div>
         </section>
 
-        <section>
-            <h2>Lo nuevo o lo más vendido</h2>
+        <section class="index-section">
+            <h2>Lo nuevo</h2>
+            <div id="productos_nuevos_contenido"></div>
         </section>
 
         <section>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 // $_SESSION['id_cliente'] = 5;
-require_once "../../models/carrito.php";
+require_once "../../models/carrito-modelo.php";
 require_once "../../models/productos-modelo.php";
 header('Content-Type: application/json');
 

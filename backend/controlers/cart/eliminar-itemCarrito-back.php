@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../../models/carrito.php";
+require_once "../../models/carrito-modelo.php";
 header('Content-Type: application/json');
 
 

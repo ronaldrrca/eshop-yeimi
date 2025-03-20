@@ -4,7 +4,7 @@ require_once '../../models/productos-modelo.php';
 header('Content-Type: application/json');
 
 $objProducto = new Productos();
-$resultado = $objProducto->verProductosFavoritosDelAdmin();
+$resultado = $objProducto->verProductosNuevos();
 
 if ($resultado) {
     $data = [];
