@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php 
+session_start();
+if (!isset($_SESSION['id_cliente'])) {
+    $_SESSION['redirect_to'] = basename($_SERVER['PHP_SELF']);
+} 
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -82,6 +87,9 @@
             
             
         <div class="cta-container"><a href="#productos" class="cta">Explora nuestros productos</a></div>
+        <div id="sesion" data-id="<?=  $_SESSION['redirect_to'] ?? ''; ?>"></div>
+
+        
     </main>
     <footer><?php include './frontend/includes-front/footer.php' ?></footer>
     <script src="./frontend/js/header-tienda.js"></script>

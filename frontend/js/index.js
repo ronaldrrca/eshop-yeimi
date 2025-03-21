@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Llamamos la función para cargar los productos favoritos
-    obtenerProductos('backend/controlers/products/ver-favoritosDelAdmin.php', 'productos_destacados_contenido');
+    obtenerProductos('backend/controlers/products/ver-favoritosDelAdmin-back.php', 'productos_destacados_contenido');
 
     // Llamamos la función para cargar los productos nuevos
     obtenerProductos('backend/controlers/products/ver-productosNuevos-back.php', 'productos_nuevos_contenido');
@@ -92,6 +92,13 @@ function mostrarProductos(productos, contenedorID) {
 
 // 4️⃣ Función para manejar el botón "Agregar al carrito"
 function agregarAlCarrito(idProducto) {
+
+    const redirect_to = document.getElementById("sesion").dataset.id;
+
+    if (redirect_to) {
+        window.location.href = "login-cliente.php";
+    }
+
     fetch("backend/controlers/cart/agregar-itemCarrito-back.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -99,6 +106,8 @@ function agregarAlCarrito(idProducto) {
     })
     .then(response => response.json())
     .then(data => {
+        
+
         if (data.status === "success") {
             mostrarMensajeEnCard(idProducto, "Agregado al carrito", "success");
         } else {

@@ -393,6 +393,11 @@ a {
     text-decoration: none;
 }
 
+#sesion {
+    display: none;
+}
+
+
 @media (min-width: 769px) {
     main {
         margin-top: 12rem;
