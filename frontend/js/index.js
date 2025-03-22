@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     obtenerProductos('backend/controlers/products/ver-productosNuevos-back.php', 'productos_nuevos_contenido');
 });
 
-// 1️⃣ Función para obtener productos desde una URL y mostrarlos en un contenedor específico
+// Función para obtener productos desde una URL y mostrarlos en un contenedor específico
 function obtenerProductos(url, contenedorID) {
     fetch(url, {
         method: 'POST',
@@ -25,7 +25,7 @@ function obtenerProductos(url, contenedorID) {
     });
 }
 
-// 2️⃣ Función para crear una card de producto
+// Función para crear una card de producto
 function crearCardProducto(producto) {
     const card = document.createElement("div");
     const card_link_producto = document.createElement("a");
@@ -39,7 +39,7 @@ function crearCardProducto(producto) {
     const botonAgregar = document.createElement("button");
     const mensaje_carrito = document.createElement("p");
 
-    // Atributos
+    // Atributos y estilos
     card.setAttribute("data-id", producto.id_producto); 
     imagen.setAttribute("src", producto.src_producto);
 

@@ -43,7 +43,7 @@ if (!isset($_SESSION['id_cliente'])) {
         </section>
 
         <section class="index-section">
-            <h2>Productos destacados</h2>
+            <h2>Destacados</h2>
             <div id="productos_destacados_contenido"></div>
         </section>
 
@@ -52,21 +52,44 @@ if (!isset($_SESSION['id_cliente'])) {
             <div id="productos_nuevos_contenido"></div>
         </section>
 
-        <section>
-            <h2>Beneficios o propuesta de valor</h2>
-                ¿Por qué comprar aquí? Ejemplo:
-                Envío gratis
-                Descuentos exclusivos
-                Pagos seguros
-                Garantía de satisfacción
+        <section class="index-section">
+            <h2>Propuesta de valor</h2>
+                <div class="index-beneficios-contenedor">
+                    <div class="index-contenedor-beneficio">
+                        <div class="index-beneficios-beneficio z a b">
+                            <img src="./assets/imgs-site/beneficios-comprasOnline.png" alt="">
+                        </div>
+                        <span>Compra en línea</span>
+                    </div>
+                    <div class="index-contenedor-beneficio">
+                        <div class="index-beneficios-beneficio z a b">
+                            <img src="./assets/imgs-site/beneficio-pago.png" alt="">
+                        </div>
+                        <span>Pago seguro</span>
+                    </div>
+                    <div class="index-contenedor-beneficio">
+                        <div class="index-beneficios-beneficio z a b">
+                            <img src="./assets/imgs-site/beneficios-envio.png" alt="">
+                        </div>
+                        <span>Envíos nacionales</span>
+                    </div>
+                    <div class="index-contenedor-beneficio">
+                        <div class="index-beneficios-beneficio z a b">
+                        <img src="./assets/imgs-site/beneficios-oferta.png" alt="">
+                    </div>
+                    <span>Las mejores ofertas</span>
+                    </div>
+                    <div class="index-contenedor-beneficio">
+                        <div class="index-beneficios-beneficio z a b">
+                        <img src="./assets/imgs-site/beneficios-calidad.png" alt="">
+                    </div>
+                    <span>Productos de calidad</span>
+                    </div>
+                </div>
         </section>
            
-        <section>
-            <h2>Novedades o promociones</h2>
-        </section>
-            
         <section>   
-            <h2>Ofertas del mes</h2>
+            <h2>Ofertas</h2>
         </section>
             
         <section>

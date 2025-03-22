@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (loginForm) {
         loginForm.addEventListener("submit", function(event) {
             event.preventDefault();
-            console.log("Formulario enviado desde login-cliente.php");
-
+            
             let formData = new FormData(this);
 
             fetch("./backend/controlers/authentications/login-clientes-back.php", {
