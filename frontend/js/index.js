@@ -32,30 +32,39 @@ function crearCardProducto(producto) {
     const card_contenedor_imagen = document.createElement("div");
     const card_contenedor_info = document.createElement("div");
     const card_extras = document.createElement("div"); 
-
+    const etiqueta_oferta = document.createElement("span");
     const imagen = document.createElement("img");
+    
     const nombre = document.createElement("h3");
     const precio = document.createElement("span");
     const botonAgregar = document.createElement("button");
     const mensaje_carrito = document.createElement("p");
 
-    // Atributos y estilos
+    // Atributos
     card.setAttribute("data-id", producto.id_producto); 
     imagen.setAttribute("src", producto.src_producto);
 
     // Contenido
+    etiqueta_oferta.innerHTML = "Oferta";
     nombre.innerHTML = producto.nombre_producto;
-    precio.innerHTML = `$ ${producto.precio_producto.toLocaleString('es-ES')}`;
+    // precio.innerHTML = `$ ${producto.precio_producto.toLocaleString('es-ES') . if (producto.oferta_producto) ?  producto.producto_oferta : ""}`;
+    precio.innerHTML = `$ ${producto.precio_producto.toLocaleString('es-ES')}` + 
+    (producto.oferta_producto ? ` <span style="color: red; margin-left: 1rem"> -${producto.porcentaje_oferta_producto}%</span>` : "");
+
+
+
     botonAgregar.textContent = "Agregar al carrito";
 
     // Clases
     card.classList.add("card");
     card_contenedor_imagen.classList.add("card_contenedor_imagen");
     card_contenedor_info.classList.add("card_contenedor_info");
+    precio.classList.add("card_precio");
     imagen.classList.add("imagen_card");
     botonAgregar.classList.add("card_button");
     card_extras.classList.add("card_extras");
     card_link_producto.classList.add("card_link_producto");
+    etiqueta_oferta.classList.add("etiqueta_oferta");
     mensaje_carrito.classList.add("mensajeCarrito");
 
     // Ocultar el mensaje al inicio
@@ -65,7 +74,7 @@ function crearCardProducto(producto) {
     card_contenedor_imagen.append(imagen);
     card_contenedor_info.append(nombre, precio);
     card_extras.append(botonAgregar, mensaje_carrito);
-    card_link_producto.append(card_contenedor_imagen, card_contenedor_info, card_extras);
+    card_link_producto.append(card_contenedor_imagen, card_contenedor_info, card_extras, etiqueta_oferta);
     card.append(card_link_producto);
 
     // Evento de agregar al carrito
@@ -87,7 +96,19 @@ function mostrarProductos(productos, contenedorID) {
     productos.forEach(producto => {
         const card = crearCardProducto(producto);
         contenedor.appendChild(card);
+    
+        const etiqueta = card.querySelector(".etiqueta_oferta");
+        
+        // Asegurar que el producto tiene oferta
+        if (etiqueta) {
+            if (producto.oferta_producto === 1) {
+                etiqueta.style.display = "block";  // Mostrar si tiene oferta
+            } else {
+                etiqueta.style.display = "none";   // Ocultar si no tiene oferta
+            }
+        }
     });
+    
 }
 
 // 4️⃣ Función para manejar el botón "Agregar al carrito"

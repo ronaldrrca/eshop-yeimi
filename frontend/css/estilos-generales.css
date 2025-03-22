@@ -189,6 +189,7 @@ button {
 .texto-gris {color: var(--color-texto-gris);}
 
 .card {
+    position: relative;
     width: 100%;
     max-width: 30rem;
     height: auto;
@@ -216,11 +217,26 @@ button {
     height: auto;
 }
 
-.card_contenedor_info span {
+.card_contenedor_info .card_precio {
     display: inline-flex;
     margin-top: 0.5rem;
     font-size: 1.6rem;
     padding-top: 0.5rem;
+}
+
+
+
+.etiqueta_oferta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px 0 0 0;
+    font-size: 1rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: red;
 }
 
 .card_extras {
