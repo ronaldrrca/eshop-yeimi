@@ -33,7 +33,7 @@ if (!isset($_SESSION['id_cliente'])) {
 </head>
 <body>
     <header><?php include_once './frontend/includes-front/header-tienda.php' ?></header>
-    <main>
+    <main id="main_index">
         <section class="hero">
             <div class="hero_frase">
                 <span>Colores, texturas y magia para tu piel.</span>
@@ -92,12 +92,67 @@ if (!isset($_SESSION['id_cliente'])) {
             <h2>Ofertas</h2>
         </section>
             
-        <section>
-            <h2>Blog o contenido útil (opcional)</h2>
-        </section>
+        <section class="index-section index-section-blog">
+            <h2>Blog</h2>
+            <p>
+                ✨ Bienvenida a nuestro Blog: Belleza que te Empodera ✨. Porque sabemos que la belleza es más que maquillaje, aquí encontrarás 
+                los mejores consejos para realzar tu esencia y resaltar lo mejor de ti. Desde rutinas de skincare hasta tips de maquillaje 
+                para cada ocasión, queremos acompañarte en tu camino hacia una piel radiante y un look impecable.
+                Descubre tendencias, secretos de expertos y productos que transformarán tu rutina de belleza. ¡Porque cuidar de ti no es un lujo, es un acto de amor propio!
+                ¿Lista para brillar? Explora nuestros artículos y encuentra la inspiración que necesitas. 
+            </p>
 
-        <section>
-            <h2>Consejos, tendencias o cómo usar los productos</h2>
+            <h3>Consejo y tendencias</h3>
+            <p>
+                <img src="./assets/imgs-site/check-icono.svg" alt="icono de check"><strong>Skincare minimalista: Menos es más.</strong>
+                El 2025 sigue apostando por una rutina de cuidado de la piel más simple y efectiva. En lugar de usar demasiados productos, opta por una rutina básica pero poderosa: <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Un buen limpiador facial.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Hidratación profunda con ingredientes naturales.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Protector solar todos los días (¡sí, incluso en invierno!).<br>
+            </p>
+            
+            <p>
+                <img src="./assets/imgs-site/check-icono.svg" alt="icono de check"><strong>Maquillaje "Clean Girl Look": Belleza natural y fresca.</strong> Esta tendencia resalta la belleza natural con un maquillaje ligero y saludable. Logra el look con:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Base ligera o BB Cream para un acabado natural.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Rubor en crema para un efecto de piel saludable.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Labios con efecto "glossy" y cejas naturales y bien definidas.<br>
+            </p>
+            <br>
+            <p>
+                <img src="./assets/imgs-site/check-icono.svg" alt="icono de check"><strong>Labios efecto "Cherry Cola".</strong>
+                Los labios en tonos marrón rojizo con un toque de gloss siguen dominando. Este estilo, inspirado en los años 90, le da un aire sofisticado y moderno a cualquier look.  
+            </p>
+            <br>
+            <p>
+                <img src="./assets/imgs-site/check-icono.svg" alt="icono de check"><strong>Piel Glow: Iluminación estratégica.</strong> El maquillaje efecto "dewy skin" sigue en tendencia. Para lograrlo:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Usa iluminadores líquidos o en crema en los puntos altos del rostro.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Prefiere bases hidratantes en lugar de las mate.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Aplica un poco de vaselina en los párpados para un brillo natural.<br>
+            </p>
+            <br>
+            <p>
+                <img src="./assets/imgs-site/check-icono.svg" alt="icono de check"><strong>Productos multifunción:</strong> Ahorra tiempo y espacio. Cada vez más mujeres buscan simplificar su rutina de belleza. Los productos "todo en uno" son perfectos para esto:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Rubores en crema que también sirven como labial.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Sombras de ojos en barra que se difuminan fácilmente.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Serums con color que hidratan y aportan cobertura ligera.<br>
+            </p>
+            <br>
+            <p>
+                <img src="./assets/imgs-site/check-icono.svg" alt="icono de check"><strong>Maquillaje sostenible y cruelty-free</strong> 🐰. Las consumidoras están cada vez más conscientes de lo que usan en su piel. Elige productos que sean:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🌱 Libres de parabenos y sulfatos.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🌱 No testados en animales.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🌱 Con ingredientes naturales y empaques reciclables.<br>
+            </p>
+            <br>
+            <p>
+                <img src="./assets/imgs-site/check-icono.svg" alt="icono de check"><strong>Peinados effortless:</strong> Belleza sin esfuerzo.<br>
+                Las ondas suaves y el cabello con textura natural son el must del año. Para lograrlo:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Usa un texturizador en spray para un look despeinado chic.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Opta por accesorios minimalistas como pinzas y cintillos.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;🔥 Prueba la tendencia "heatless curls" para ondas sin calor.<br>
+            </p>
+
+
         </section>
             
         <section>

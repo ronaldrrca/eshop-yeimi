@@ -4,6 +4,8 @@ require_once '../../models/clientes-modelo.php';
 header("Content-Type: application/json");
 
 $redirect_to = $_SESSION['redirect_to'] ?? "index.php";
+unset($_SESSION['redirect_to']);
+
 
 // Validando la recepción de los datos
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {

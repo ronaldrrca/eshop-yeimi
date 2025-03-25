@@ -109,7 +109,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
     margin-top: 6rem;
     padding: 2rem 1rem;
 }
