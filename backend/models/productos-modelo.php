@@ -175,10 +175,10 @@ class Productos {
     }
 
 
-    public function verProductosFavoritosDelAdmin() {
+    public function verProductosDestacados() {
         $objConexion = new Conexion();
         $conexion = $objConexion->conectarse();
-        $sql = "CALL verProductosFavoritosDelAdmin()";
+        $sql = "CALL verProductosDestacados()";
         $stmt = $conexion->prepare($sql);
     
         if ($stmt === false) {
@@ -322,6 +322,27 @@ class Productos {
         $objConexion = new Conexion();
         $conexion = $objConexion->conectarse();
         $sql = "CALL verProductosNuevos()";
+        $stmt = $conexion->prepare($sql);
+            
+        if ($stmt === false) {
+            die("Error en la preparación de la consulta: " . $conexion->error);
+        }
+    
+        // Ejecutar y validar la consulta
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+        
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
+    }
+
+
+    public function verProductosEnOferta() {
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+        $sql = "CALL verProductosEnOferta()";
         $stmt = $conexion->prepare($sql);
             
         if ($stmt === false) {

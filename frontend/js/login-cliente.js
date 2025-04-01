@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
             fetch("./backend/controlers/authentications/login-clientes-back.php", {
                 method: "POST",
+                headers: {
+                        "X-Requested-With": "XMLHttpRequest" 
+                        },
                 body: formData
             })
             .then(response => response.json())

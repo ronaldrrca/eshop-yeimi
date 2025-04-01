@@ -75,11 +75,54 @@
 
 .index-section-blog {
     padding: 0 2rem;
+    gap: 2rem;
+}
+
+.index-section-blog_seccion {
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+
+.index-section-blog_consejo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 3rem;
+}
+
+.index-section-blog_consejo_texto {
+    margin-bottom: 1rem;
+}
+
+
+.index-section-blog_consejo div {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.index-section-blog_vineta {
+    display: flex;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-secundario);
+    border-radius: 50%;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    transform: translateY(8px);
 }
 
 .index-section p {
     width: 100%;
-    margin-bottom: 2rem;
+    
     text-align: left;
     font-size: 1.5rem;
     /* display: inline-block; */
@@ -99,12 +142,14 @@
 
 .index-section h3 {
     width: 100%;
-    margin-top: 3rem;
     margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
     text-align: left;
+    color: #000000e6;
 }
 
-#productos_destacados_contenido, #productos_nuevos_contenido {
+#productos_destacados_contenido, #productos_nuevos_contenido, #productos_oferta_contenido {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -216,7 +261,7 @@
       font-size: 1.6rem;
     }
 
-    #productos_destacados_contenido, #productos_nuevos_contenido {
+    #productos_destacados_contenido, #productos_nuevos_contenido, #productos_oferta_contenido {
         gap: 3rem;
     }
 
@@ -231,7 +276,7 @@
       font-size: 2.2rem;
     }
 
-    #productos_destacados_contenido, #productos_nuevos_contenido {
+    #productos_destacados_contenido, #productos_nuevos_contenido, #productos_oferta_contenido {
         gap: 5rem;
     }
     /* .index-beneficios-contenedor {

@@ -220,6 +220,8 @@ nav a::after {
 
     .header_usuario_nombreCliente {
         cursor: pointer;
+        margin-right: 0.5rem;
+        font-weight: 600;
     }       
 
     .header_iconos_varios {

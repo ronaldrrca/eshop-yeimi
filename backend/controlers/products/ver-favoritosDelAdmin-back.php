@@ -1,10 +1,10 @@
 <?php
-session_start();
-require_once '../../models/productos-modelo.php';
+// session_start();
+require_once './backend/models/productos-modelo.php';
 header('Content-Type: application/json');
 
 $objProducto = new Productos();
-$resultado = $objProducto->verProductosFavoritosDelAdmin();
+$resultado_verProductosFavoritosDelAdmin = $objProducto->verProductosFavoritosDelAdmin();
 
 if ($resultado) {
     $data = [];

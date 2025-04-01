@@ -1,4 +1,10 @@
 <?php
+// Aseguramos que el archivo no se accesible desde el navegador
+if ($_SERVER['HTTP_X_REQUESTED_WITH'] !== 'XMLHttpRequest') {
+    http_response_code(403);
+    die(json_encode(["error" => "Acceso no autorizado"]));
+}
+
 session_start();
 require_once '../../models/clientes-modelo.php';
 header("Content-Type: application/json");

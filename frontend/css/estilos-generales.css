@@ -188,21 +188,25 @@ button {
 .texto-gris {color: var(--color-texto-gris);}
 
 .card {
-    position: relative;
+    /* position: relative; */
     width: 100%;
     max-width: 30rem;
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 0.3rem 0.3rem;
+    justify-content: space-between;
     background: var(--color-primario);
     box-shadow: var(--sombra-base);
     border-radius: 8px;
     transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.08);
     cursor: pointer;
+}
+
+.card_link_producto {
+    position: relative;
+    height: auto;
+    padding: 1rem;
 }
 
 .card_contenedor_imagen {
@@ -216,59 +220,102 @@ button {
     height: auto;
 }
 
-.card_contenedor_info .card_precio {
-    display: inline-flex;
-    margin-top: 0.5rem;
+.card_contenedor_info {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    height: 12.6rem;
     font-size: 1.6rem;
-    padding-top: 0.5rem;
+    color: #333333;
 }
 
+.card_contenedor_info h3 {
+    height: 3rem;
+    line-height: 1;
+}
 
+.card_marca {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.card_precio {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_precioOferta {
+    display: flex;
+    
+}
+
+.card_precioOferta_precio {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ccc;
+}
+
+.card_precioOferta_descuento {
+    margin-left: 1rem;
+    font-weight: 600;
+    color: red;
+}
+
+.card_precioFinal {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
 
 .etiqueta_oferta {
     position: absolute;
     top: 0;
     left: 0;
-    display: none;
+    display: block;
     padding: 0.5rem 1rem;
     border-radius: 8px 0 0 0;
     font-size: 1rem;
     color: #FFFFFF;
     font-weight: bold;
     background-color: red;
+    z-index: 100;
+}
+
+.porcentaje_oferta_producto {
+    color: red;
+    margin-left: 1rem;
 }
 
 .card_extras {
     width: 100%;
-    position: relative;
+    height: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 2.5rem;
-}
+    justify-content: flex-start;
+   }
 
 .card_button {
     font-size: 1.1rem;
     padding: 0.8rem 2rem;
     border-radius: 1.3rem;
-    margin-top: 1.4rem;
+    /* margin-top: 1.4rem; */
     transition: all 0.3s;
     background-color: #DFE5E8FF;
     color: var(--color-texto-gris);
+    z-index: 99;
 }
 
-.card_contenedor_info {
-    padding: 1rem;
-    width: 100%;
-    height: auto;
-}
 
 @supports (-webkit-line-clamp: 1) {
     .card_contenedor_info h3 {
+        max-height: 3rem;
         font-size: clamp(1.4rem, 2vw, 1.6rem); 
         display: -webkit-box;  
         -webkit-box-orient: vertical;  
-        -webkit-line-clamp: 1;  /* Número de líneas antes del corte */
+        -webkit-line-clamp: 2;  /* Número de líneas antes del corte */
         overflow: hidden;  
         text-overflow: ellipsis;  
         word-break: break-word;
@@ -278,7 +325,6 @@ button {
 @supports not (-webkit-line-clamp: 1) {
     .card_contenedor_info h3 {
         display: block;
-        max-height: 3em; /* Ajusta según el tamaño de línea */
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap; /* Si solo quieres una línea */
@@ -287,17 +333,14 @@ button {
 
 
 .mensajeCarrito {
-    width: 20rem;
-    position: absolute;
-    bottom: 0.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
     border-radius: 5px;
     font-size: 14px;
     color: white;
-    display: none;
+    display: flex;
     transition: opacity 0.5s;
-    text-align: center;
+    justify-content: center; 
+
 }
 
 .mensaje-exito {
@@ -422,6 +465,7 @@ a {
         width: 30%;
         max-width: 23rem;
     }
+
 }
 
 @media (min-width: 1200px) {
