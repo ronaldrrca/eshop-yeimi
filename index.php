@@ -226,18 +226,26 @@ if (!isset($_SESSION['id_cliente'])) {
             </div>
         <section>
             
-        <section>
-            <h2>Suscripciones a Newsletter (formulario)</h2>
-        </section>
-
-        <section>
-            <h2>Tienda física y envíos nacinales</h2>
-        </section>
+        <div class="index-section_otros">
+            <section class="index-section">
+                <h2>Suscripciones a Newsletter</h2>
+                <p>Suscríbete a nuestra comunidad, tu rutina de belleza empieza aquí. Recibe las últimas tendencias en belleza, ofertas exclusivas y tips para resaltar tu belleza natural.</p>
+                <form id="formulario_newsletter" action="./backend/controlers/clients/registrar-enNewsLetter-back.php" method="post">
+                    <input type="text" name="nombre" id="nombre_newsLetter" placeholder="Nombre">
+                    <input type="email" name="email" id="email_newsLetter" placeholder="Correo electrónico">
+                    <input type="submit" value="Suscribirse">
+                </form>
+            </section>
             
-            
+            <section class="index-section">
+                <h2>Tienda física y envíos nacionales</h2>
+                <p>Visítanos en nuestra tienda física. Descubre los mejores productos de belleza en persona, o compra en línea y recibe tus productos favoritos en tu hogar.</p>
+                <picture class="index-section_imagenTienda"><img src="./assets/imgs-site/imagen-tienda.webp" alt="tienda de cosméticos"></picture>
+            </section>  
+        </div>  
+                           
         <div class="cta-container"><a href="#productos" class="cta">Explora nuestros productos</a></div>
         <div id="sesion" data-id="<?=  $_SESSION['redirect_to'] ?? ''; ?>"></div>
-
         
     </main>
     <footer><?php include './frontend/includes-front/footer.php' ?></footer>

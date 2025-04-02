@@ -310,6 +310,31 @@ class Clientes {
     
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
+
+
+    public function registrarEnNewsLetter($nombreRegistro, $emailRegistro) {
+        $this->nombre = $nombreRegistro;
+        $this->email = $emailRegistro;
+
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+        $sql = "CALL registrarEnNewsLetter(?, ?)";
+        $stmt = $conexion->prepare($sql);
+
+        if ($stmt === false) {
+            die("Error en la preparación de la consulta: " . $conexion->error);
+        }
+
+        $stmt->bind_param("ss", $this->nombre, $this->email);
+
+        // Ejecutar y validar la consulta
+        $resultado = $stmt->execute();
+
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
+    }
 }
 
 

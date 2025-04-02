@@ -249,7 +249,48 @@
                 -16px 32px 32px rgba(0,0,0,0.15), 
                 -32px 64px 64px rgba(0,0,0,0.25);
   }
+
+  .index-section_otros {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5rem;
+    
+  }
+
+  .index-section_otros .index-section {
+    flex: 1;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 3rem;
+    
+  }
+
+  #formulario_newsletter {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
   
+  #formulario_newsletter input[type="submit"] {
+    margin-top: 0;
+  }
+
+  .index-section_imagenTienda {
+    width: 30rem;
+    margin-top: 2rem;
+    height: 18.2rem;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    border: 1px solid #000;
+  }
+
+  .index-section_imagenTienda img {
+    width: 100%;
+    height: auto;
+  }
 
 
 @media (min-width: 769px) {
@@ -266,8 +307,18 @@
     }
 
     .index-beneficios-contenedor {
-        
         gap: 4rem;
+    }
+
+    .index-section_otros {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5rem;
+      }
+
+    .index-section_otros .index-section {
+        width: 40%;
     }
   }
 
