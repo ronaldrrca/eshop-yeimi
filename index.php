@@ -251,6 +251,7 @@ if (!isset($_SESSION['id_cliente'])) {
     <footer><?php include './frontend/includes-front/footer.php' ?></footer>
     <script src="./frontend/js/header-tienda.js"></script>
     <script src="./frontend/js/index.js"></script>
+    <script src="./frontend/js/cards.js"></script>
     <script src="./frontend/js/footer.js"></script>
 </body>
 </html>

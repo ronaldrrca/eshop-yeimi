@@ -4,68 +4,19 @@ header {
     width: 100%;
     height: 8rem;
     display: flex;
-    padding: 1rem 0;
-    background-color: var(--color-primario);
-    z-index: 200;
-}
-
-.header_contenedor_varios {
-    width: 100%;
-    height: 100%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
+    background-color: var(--color-primario);
+    z-index: 200;
+    box-shadow: 0 2px 4px 0 rgba(51, 51, 51, 0.2), 0 3px 10px 0 rgba(51, 51, 51, 0.19);
  }
 
-.social-icons {
-    display: none;
-    gap: 10px;
-}
-
-.social-icon {
-    display: inline-flex;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    color: #888; /* Color gris inicial */
-    transition: color 0.3s ease-in-out;
-}
-
-.social-icon svg {
-    width: 2rem;
-    height: 2rem;
-    fill: currentColor; /* Hace que el color del SVG dependa de la clase */
-}
-
-.social-icon.x:hover {
-    color: #000000;
-}
-
-.social-icon.facebook:hover {
-    color: #1877F2;
-}
-
-.social-icon.instagram:hover {
-    color: #E4405F;
-}
-
-.social-icon.youtube:hover {
-    color: #FF0000;
-}
-
-.social-icon.pinterest:hover {
-    color: #E60023;
-}
-
-.social-icons, .header_identidad_marca, .header_iconos_varios {
-    height: 100%;
-}
 
 .header_identidad_marca {
     display: flex;
     align-items: center;
-    padding-left: 2rem;
+    height: 100%;
     gap: 0.5rem;
     
 }
@@ -82,16 +33,19 @@ header {
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   
+}
+
+.header_identidad_marca a{
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .header_iconos_varios {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 8rem;
     width: auto;
-    gap: 1rem;
 }
 
 .logo {
@@ -103,27 +57,15 @@ header {
     display: none;
 }
 
-.header_link_whatsapp {
-    display: flex;
-}
-
-.header_icono_whatsapp {
-    width: 3rem;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.header_icono_whatsapp:hover {
-    transform: scale(1.1);
-}
-
 .icono_carrito {
     width: 2.5rem;
+    margin-left: 2rem;
     cursor: pointer;
 }
 
 .icono_menu {
     width: 5rem;
+    margin-left: 2rem;
 }
 
 .icono_cerrar_menu {
@@ -133,13 +75,16 @@ header {
     right: 2rem;
 }
 
+.icono_usuario{
+    display: none;
+}
+
 .nav {
     width: 100%;
     background-color: var(--color-terciario);
     position: absolute;
     top: 100%;
     right: 0;
-    /* display: none; */
     padding: 2rem 0;
     opacity: 0;
     visibility: hidden;
@@ -199,13 +144,14 @@ nav a::after {
 
 
 @media (min-width: 769px) {
-    .icono_menu, .icono_cerrar_menu {
+    .icono_cerrar_menu {
         display: none;
     }
 
     .icono_usuario {
         display: block;
         width: 2.6rem;
+        margin-right: 0.5rem;
         cursor: pointer;
     }
 
@@ -219,68 +165,30 @@ nav a::after {
     }
 
     .header_usuario_nombreCliente {
+        display: block;
+        width: 9rem;
         cursor: pointer;
-        margin-right: 0.5rem;
+        margin-right: 0;
         font-weight: 600;
     }       
 
-    .header_iconos_varios {
-        gap: 2rem;
-    }
-    
     header {
-        height: 12rem;
-        flex-direction: column;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding: 0 3rem;
     }
+  
 
     main {
-        margin-top: 12rem;
         padding-left: 3rem;
         padding-right: 3rem;
     }
 
-    .header_contenedor_varios {
-        height: 6rem;
-       justify-content: sp;
-    }
+  
 
     .header_identidad_marca h1 {
         line-height: 2.5rem;
     }
 
-    .nav {
-        display: flex;
-        justify-content: center;
-        height: 4rem;
-        width: 100%;
-        position: static;
-        top: unset;
-        right: unset;
-        padding: 0;
-        background-color: transparent;
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .nav ul {
-        width: auto;
-        height: auto;
-        flex-direction: row;
-        gap: 4rem;
-        align-items: flex-end;
-    }
-
-    .nav ul li {
-        width: auto;
-    }
-
-    .nav ul li a {
-        color: var(--color-texto-gris);
-        width: auto;
-    }
-
+    
     .social-icons {
         display: flex;
         justify-content: flex-start;
@@ -325,28 +233,53 @@ nav a::after {
 }
 
 @media (min-width: 1200px) {
-    header {
-        height: 16rem;
-        padding: 2rem 0;
-        padding-left: 5rem;
-        padding-right: 5rem;
+    .nav {
+        display: flex;
+        justify-content: center;
+        height: 4rem;
+        width: 100%;
+        position: static;
+        top: unset;
+        right: unset;
+        padding: 0;
+        background-color: transparent;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav ul {
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 4rem;
+        align-items: flex-end;
+        align-items: center;
+    }
+
+    .nav ul li {
+        width: auto;
+    }
+
+    .nav ul li a {
+        color: var(--color-texto-gris);
+        width: auto;
     }
 
     main {
-        margin-top: 16rem;
         padding-left: 5rem;
         padding-right: 5rem;
     }
 
-    .header_contenedor_varios {
-        height: 8rem;
-    }
-
+  
     nav {        
         height: 4rem;
     }
 
     .nav ul {
-        gap: 8rem;
+        gap: 6rem;
+    }
+
+    .icono_menu {
+        display: none
     }
 }

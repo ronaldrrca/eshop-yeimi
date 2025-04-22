@@ -11,7 +11,7 @@
 
 <div class="footer-section footer-section-redes">
     <h3>Síguenos en redes sociales</h3>
-    <div id="footer-links-redes" class="footer-section">
+    <!-- <div id="footer-links-redes" class="footer-section">
         <p class="footer-redes">
             <a href="https://x.com/tu_cuenta" target="_blank">X</a> | 
             <a href="https://facebook.com/tu_pagina" target="_blank">Facebook</a> | 
@@ -19,7 +19,7 @@
             <a href="https://youtube.com/tu_cuenta" target="_blank">Youtube</a> |
             <a href="https://pinterest.com/tu_cuenta" target="_blank">Pinterest</a>
         </p>
-    </div>
+    </div> -->
     <div id="footer-iconos-redes" class="footer-section">
         <a href="#" class="social-icon x" target="_blank">
             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

@@ -105,11 +105,11 @@ body {
 main {
     max-width: 150rem;
     min-height: 50rem;
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 6rem;
     padding: 2rem 1rem;
 }
 
@@ -189,8 +189,8 @@ button {
 
 .card {
     /* position: relative; */
-    width: 100%;
-    max-width: 30rem;
+    width: 45%;
+    max-width: 23rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -457,13 +457,10 @@ a {
 
 
 @media (min-width: 769px) {
-    main {
-        margin-top: 12rem;
-    }
-    
+       
     .card {
         width: 30%;
-        max-width: 23rem;
+        
     }
 
 }
